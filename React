@@ -19,23 +19,24 @@ return {
             ["ready_reaction"]="turnaround"
         },
     }
-	["Bozzetto Breadwinner"]={
+    ["Bozzetto Breadwinner"]={
         ["Fire Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Barfira" <me>"
+            ["ready_reaction"]="input /ma 'Barfira' <me>"
         },
 		["Blizzard Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Barblizzara" <me>"
+            ["ready_reaction"]="input /ma 'Barblizzara' <me>"
         }, 
 		["Aero Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Baraera" <me>"
+            ["ready_reaction"]="input /ma 'Baraera' <me>"
         }, 
 		["Stone Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Barstonra" <me>"
+            ["ready_reaction"]="input /ma 'Barstonra' <me>"
         }, 
 		["Thunder Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Barthundra" <me>"
+            ["ready_reaction"]="input /ma 'Barthundra' <me>"
         }, 
 		["Water Meeble Warble"]={ 
-            ["ready_reaction"]="input /ma "Barwatera" <me>"
-        }, 
+            ["ready_reaction"]="input /ma 'Barwatera' <me>"
+        }
+    }	
 }
