@@ -8,7 +8,7 @@ return {
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
         }
-    }, 
+    } 
     ["Bozzetto Freyja"]={
         ["Petrifaction"]={
             ["complete_reaction"]="facemob", 
