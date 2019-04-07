@@ -17,7 +17,7 @@ return {
         ["Petrifying Dance"]={
             ["complete_reaction"]="facemob", 
             ["ready_reaction"]="turnaround"
-        },
+        }
     }
     ["Bozzetto Breadwinner"]={
         ["Fire Meeble Warble"]={ 
