@@ -1,0 +1,41 @@
+return {
+    ["Bozzetto Skathi"]={
+        ["Blight Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }
+    }, 
+    ["Bozzetto Freyja"]={
+        ["Petrifaction"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        }, 
+        ["Petrifying Dance"]={
+            ["complete_reaction"]="facemob", 
+            ["ready_reaction"]="turnaround"
+        },
+    }
+	["Bozzetto Breadwinner"]={
+        ["Fire Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Barfira" <me>"
+        },
+		["Blizzard Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Barblizzara" <me>"
+        }, 
+		["Aero Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Baraera" <me>"
+        }, 
+		["Stone Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Barstonra" <me>"
+        }, 
+		["Thunder Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Barthundra" <me>"
+        }, 
+		["Water Meeble Warble"]={ 
+            ["ready_reaction"]="input /ma "Barwatera" <me>"
+        }, 
+}
