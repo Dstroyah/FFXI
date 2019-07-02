@@ -120,7 +120,7 @@ function init_gear_sets()
     -- Midcast Sets
     
     sets.midcast.FastRecast = {ammo="Incantor Stone",
-		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Orison Locket",ear2="Loquac. Earring",
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Orunmila's Torque",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Lebeche Ring",ring2="Prolix Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Witful Belt",legs={ name="Lengo Pants", augments={'INT+9','Mag. Acc.+15','"Mag.Atk.Bns."+14',}},feet="Chelona Boots",}
 		-- Enchanter's Earring +1
@@ -134,7 +134,7 @@ function init_gear_sets()
     sets.midcast.CureSolace = set_combine(sets.midcast.FastRecast,   {main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},sub="Genmei Shield",ammo="Hydrocera",
 		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},neck="Incanter's Torque",ear1="Ethereal Earring",ear2="Glorious Earring",
 		body="Ebers Bliaud +1",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Sirona's Ring",
-        back={name="Alaunus's Cape",augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%'}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
 		
     sets.midcast.Cure = sets.midcast.CureSolace
 	
@@ -148,13 +148,13 @@ function init_gear_sets()
     sets.midcast.Curaga = set_combine(sets.midcast.FastRecast,    {main={ name="Queller Rod", augments={'MND+15','Mag. Acc.+15','"Cure" potency +15%',}},sub="Genmei Shield",ammo="Hydrocera",
 		head={name="Vanya Hood",augments={'MP+50','"Cure" potency +7%','Enmity -6'}},neck="Orunmila's Torque",ear2="Glorious Earring",ear1="Nourishing Earring +1",
 		body="Theophany Briault +3",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Defending Ring",
-		back={name="Alaunus's Cape",augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%',}},waist="Luminary Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},waist="Luminary Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
 	-- Ambu cape m/ MND og -Enmity	
 		
     sets.midcast.CureMelee = set_combine(sets.midcast.FastRecast,    {main="Ababinili +1",sub="Curatio Grip",ammo="Hydrocera",
 		head={name="Vanya Hood",augments={'MP+50','"Fast Cast"+10','Haste+2%'}},neck="Colossus's Torque",ear1="Nourishing Earring +1",ear2="Glorious Earring",
 		body={name="Vanya Robe",augments={'Healing Magic Skill +20','"Cure" spellcasting time -7%','Magic Dmg. taken -3%'}},hands="Theophany Mitts +3",ring1="Ephedra Ring",ring2="Sirona's Ring",
-        back={name="Alaunus's Cape",augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%',}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet="Inyanga Crackows +2"})
+        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Phys. dmg. taken-10%',}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet="Inyanga Crackows +2"})
 
 	-- 572 Healing Magic Skill + 82% fra +Cursna gear = 51% removal rate
     sets.midcast.Cursna = set_combine(sets.midcast.FastRecast,    {main="Yagrush",sub="Genmei Shield",ammo="Clarus Stone",
@@ -163,7 +163,7 @@ function init_gear_sets()
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Witful Belt",legs="Theophany Pantaloons +3",feet={name="Vanya Clogs", augments={'Healing Magic Skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3%',}}})
 		
     sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast,    {main="Yagrush",sub="Genmei Shield",ammo="Clarus Stone",
-		head="Ebers Cap",neck="Orunmila's Torque",ear1="Ethereal Earring",ear2="Mendi. Earring",
+		head="Ebers Cap",neck="Cleric's Torque +1",ear1="Ethereal Earring",ear2="Mendi. Earring",
 		body="Inyanga Jubbah +2",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Defending Ring",
 		legs="Ebers Pantaloons +1",back="Mending Cape"})
 	-- Impatiens
@@ -193,8 +193,8 @@ function init_gear_sets()
 
     sets.midcast.Regen = set_combine(sets.midcast.FastRecast,    {main="Bolelabunga",sub="Sors Shield",ammo="Impatiens",head="Inyanga Tiara +2",neck="Incanter's Torque",ear1="Mendicant's Earring",ear2="Gifted Earring",
 		body="Piety Briault +3",hands="Ebers Mitts",ring1="Lebeche Ring",ring2="Kuchekula Ring",
-		back="Perimede Cape",waist="Luminary Sash",legs="Theophany Pantaloons +3",feet="Theophany Duckbills +2"})
-		-- Ebers Mitts +1, Theophany Duckbills +3, Ammurapi Shield
+		back="Perimede Cape",waist="Luminary Sash",legs="Theophany Pantaloons +3",feet="Theophany Duckbills +3"})
+		-- Ebers Mitts +1, Ammurapi Shield
 
     sets.midcast.Protectra = set_combine(sets.midcast.FastRecast,   {feet="Piety Duckbills +2"}) -- Dynasty Mitts, Ammurapi Shield
 	
@@ -205,7 +205,7 @@ function init_gear_sets()
 	sets.midcast.Shell = sets.midcast.Shellra
 
     sets.midcast['Divine Magic'] = set_combine(sets.midcast.FastRecast,   {ammo="Dosis Tathlum",
-		head={ name="Chironic Hat", augments={'Mag. Acc.+16 "Mag.Atk.Bns."+16','Enmity-2','INT+5','"Mag.Atk.Bns."+14',}},neck="Eddy Necklace",ear1="Gwati Earring",ear2="Friomisi Earring",
+		head={ name="Chironic Hat", augments={'Mag. Acc.+13','AGI+10','Accuracy+8 Attack+8','Mag. Acc.+18 "Mag.Atk.Bns."+18',}},neck="Eddy Necklace",ear1="Gwati Earring",ear2="Friomisi Earring",
 		body="Chironic Doublet",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Adoulin Ring",ring2="Globidonta Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Refoccilation Stone",legs={ name="Chironic Hose", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Mag. Acc.+11','"Mag.Atk.Bns."+13',}},feet="Medium's Sabots"})
 		-- Chironic Slippers Augmented
@@ -225,17 +225,17 @@ function init_gear_sets()
 		
 		
     -- Custom spell classes
-    sets.midcast.MndEnfeebles = set_combine(sets.midcast.FastRecast,   {main="Grioavolr",sub="Mephitis Grip",ammo="Hydrocera",
+    sets.midcast.MndEnfeebles = set_combine(sets.midcast.FastRecast,   {main={ name="Grioavolr", augments={'Enh. Mag. eff. dur. +9','Mag. Acc.+11','"Mag.Atk.Bns."+18','Magic Damage +5',}},sub="Enki Grip",ammo="Hydrocera",
 		head="Theophany Cap +2",neck="Erra Pendant",ear1="Dignitary's Earring",ear2="Gwati Earring",
 		body="Theophany Briault +3",hands="Inyanga Dastanas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Porous Rope",legs={ name="Chironic Hose", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Mag. Acc.+11','"Mag.Atk.Bns."+13',}},feet="Theophany Duckbills +2"})
-	-- Theophany head, legs, feet	
+		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Porous Rope",legs={ name="Chironic Hose", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Mag. Acc.+11','"Mag.Atk.Bns."+13',}},feet="Theophany Duckbills +3"})
+	-- Theophany head, legs, feet, Chironic Hose Augmented m/Macc og MAB
 
-	sets.midcast.IntEnfeebles = set_combine(sets.midcast.FastRecast,   {main="Grioavolr",sub="Mephitis Grip",ammo="Pemphredo Tathlum",
+	sets.midcast.IntEnfeebles = set_combine(sets.midcast.FastRecast,   {main={ name="Grioavolr", augments={'Enh. Mag. eff. dur. +9','Mag. Acc.+11','"Mag.Atk.Bns."+18','Magic Damage +5',}},sub="Enki Grip",ammo="Pemphredo Tathlum",
 		head="Theophany Cap +2",neck="Erra Pendant",ear1="Dignitary's Earring",ear2="Gwati Earring",
 		body="Theophany Briault +3",hands="Inyanga Dastanas +2",ring1="Stikini Ring",ring2="Stikini Ring",
-		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Porous Rope",legs={ name="Chironic Hose", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Mag. Acc.+11','"Mag.Atk.Bns."+13',}},feet="Theophany Duckbills +2"})
-    -- Theophany head, legs, feet
+		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Porous Rope",legs={ name="Chironic Hose", augments={'Mag. Acc.+17 "Mag.Atk.Bns."+17','Mag. Acc.+11','"Mag.Atk.Bns."+13',}},feet="Theophany Duckbills +3"})
+    -- Theophany head, legs, feet, Chironic Hose Augmented m/Macc og MAB
 	
 	sets.magic_burst = {neck="Mizukage-no-Kubikazari",ring1="Locus Ring",ring2="Mujin Band"}
 
@@ -256,7 +256,7 @@ function init_gear_sets()
     sets.idle.PDT = {main="Bolelabunga",sub="Genmei Shield",ammo="Staunch Tathlum",
 		head="Inyanga Tiara +2",neck="Loricate Torque +1",ear1="Ethereal Earring",ear2="Genmei Earring",
 		body="Inyanga Jubbah +2",hands="Theophany Mitts +3",ring1="Succor Ring",ring2="Defending Ring",
-		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Luminary Sash",legs="Theophany Pantaloons +2",feet="Battlecast Gaiters"}
+		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Phys. dmg. taken-10%',}},waist="Luminary Sash",legs="Theophany Pantaloons +3",feet="Battlecast Gaiters"}
 
     sets.idle.Town = {main="Yagrush",sub="Genmei Shield",ammo="Homiliary",
 		head="Vanya Hood",neck="Loricate Torque +1",ear1="Nourishing Earring +1",ear2="Glorious Earring",
