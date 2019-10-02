@@ -19,6 +19,10 @@ return {
             ["ready_reaction"]="turnaround"
         }
     }
+    ["Zerde"]={
+        ["Just Desserts"]={ 
+            ["ready_reaction"]="input /ma 'Stun' Zerde"
+        },	
     ["Bozzetto Breadwinner"]={
         ["Fire Meeble Warble"]={ 
             ["ready_reaction"]="input /ma 'Barfira' <me>"
