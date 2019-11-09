@@ -41,7 +41,7 @@ function get_sets()
 		
 		sets.Idle.Standard = {	ammo="Staunch Tathlum",
 								head="Valorous Mask",
-								body="Flamma Korazin +2",
+								body="Chozoron Coselete",
 								hands="Sakonji Kote",
 								legs="Valor. Hose",
 								feet="Danzo Sune-Ate",
@@ -50,13 +50,13 @@ function get_sets()
 								left_ear="Genmei Earring",
 								right_ear="Thureous Earring",
 								left_ring="Defending Ring",
-								right_ring="Vocane Ring",
+								right_ring="Gelatinous Ring +1",
 								back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 							  
 		sets.Idle.Town = {	ammo="Ginsen",
 							head="Flam. Zucchetto +2",
 							body="Kasuga Domaru +1",
-							hands="Wakido Kote +2",
+							hands="Wakido Kote +3",
 							legs="Hiza. Hizayoroi +2",
 							feet="Danzo Sune-Ate",
 							neck="Samurai's Nodowa",
@@ -64,7 +64,7 @@ function get_sets()
 							left_ear="Cessance Earring",
 							right_ear="Brutal Earring",
 							left_ring="Flamma Ring",
-							right_ring="Petrov Ring",
+							right_ring="Niqmaddu Ring",
 							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 	
 		
@@ -75,14 +75,14 @@ function get_sets()
 		--TP Sets--
 		sets.TP = {}
 
-		sets.TP.index = {'Standard', 'Accuracy', 'DT'}
-		--1=Standard, 2=Accuracy, 3=DT--
+		sets.TP.index = {'Standard', 'MidAccuracy','HighAccuracy', 'DT'}
+		--1=Standard, 2=MidAccuracy, 3=HighAccuracy, 4=DT--
 		TP_ind = 1
 	
 		sets.TP.Standard = {ammo="Ginsen",
 							head="Flam. Zucchetto +2",
 							body="Kasuga Domaru +1",
-							hands="Wakido Kote +2",
+							hands="Wakido Kote +3",
 							legs="Ryuo Hakama",
 							feet="Ryuo Sune-Ate",
 							neck="Samurai's Nodowa",
@@ -90,13 +90,27 @@ function get_sets()
 							left_ear="Cessance Earring",
 							right_ear="Brutal Earring",
 							left_ring="Flamma Ring",
-							right_ring="Petrov Ring",
+							right_ring="Niqmaddu Ring",
 							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 							
-		sets.TP.Accuracy = {ammo="Ginsen",
+		sets.TP.MidAccuracy = {ammo="Ginsen",
 							head="Flam. Zucchetto +2",
 							body="Kendatsuba Samue",
-							hands="Wakido Kote +2",
+							hands="Wakido Kote +3",
+							legs="Kendatsuba Hakama",
+							feet="Ryuo Sune-Ate",
+							neck="Samurai's Nodowa",
+							waist="Ioskeha Belt",
+							left_ear="Cessance Earring",
+							right_ear="Digni. Earring",
+							left_ring="Flamma Ring",
+							right_ring="Niqmaddu Ring",
+							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
+							
+		sets.TP.HighAccuracy = {ammo="Ginsen",
+							head="Flam. Zucchetto +2",
+							body="Kendatsuba Samue",
+							hands="Wakido Kote +3",
 							legs="Kendatsuba Hakama",
 							feet="Flam. Gambieras +2",
 							neck="Samurai's Nodowa",
@@ -104,13 +118,22 @@ function get_sets()
 							left_ear="Cessance Earring",
 							right_ear="Digni. Earring",
 							left_ring="Flamma Ring",
-							right_ring="Petrov Ring",
+							right_ring="Niqmaddu Ring",
 							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 							
-		sets.TP.DT = {ammo="Ginsen",
-					  head="Yaoyotl helm",neck="Asperity necklace", ear1="Steelflash earring", ear2="Bladeborn earring",
-					  body="Miki. breastplate",hands="Wakido Kote +2",ring1="K'ayres ring",ring2="Rajas ring",
-					  back="Takaha mantle",waist="Cetl belt",legs="Otronif brais",feet="Waki. Sune-Ate +1"}							  
+		sets.TP.DT = {ammo="Staunch Tathlum",
+					  head="Kendatsuba Jinpachi",
+					  neck="Loricate Torque +1", 
+					  ear1="Odnowa earring +1", 
+					  ear2="Genmei earring",
+					  body="Chozoron Coselete",
+					  hands="Wakido Kote +3",
+					  ring1="Defending ring",
+					  ring2="Gelatinous Ring +1",
+					  back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+					  waist="Ioskeha Belt",
+					  legs="Kendatsuba Hakama",
+					  feet="Kendatsuba Sune-Ate"}							  
 							  
 		sets.RangedTP = {}
 
@@ -157,7 +180,7 @@ function get_sets()
 								left_ear="Moonshade Earring",
 								right_ear="Ishvara Earring",
 								left_ring="Flamma Ring",
-								right_ring="Apate Ring",
+								right_ring="Niqmaddu Ring",
 								back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Weapon skill damage +10%','Damage taken-1%',}},}
 								  
 		sets.Shoha.Accuracy = {range="Cibitshavore",ammo="Tulfaire arrow",
@@ -180,8 +203,8 @@ function get_sets()
 							waist="Fotia Belt",
 							left_ear="Moonshade Earring",
 							right_ear="Ishvara Earring",
-							left_ring="Shukuyu Ring",
-							right_ring="Apate Ring",
+							left_ring="Karieyh Ring",
+							right_ring="Niqmaddu Ring",
 							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Weapon skill damage +10%','Damage taken-1%',}},}
 							   
 		sets.Fudo.Accuracy = {range="Cibitshavore",ammo="Tulfaire arrow",
@@ -204,8 +227,8 @@ function get_sets()
 							waist="Fotia Belt",
 							left_ear="Moonshade Earring",
 							right_ear="Ishvara Earring",
-							left_ring="Shukuyu Ring",
-							right_ring="Apate Ring",
+							left_ring="Karieyh Ring",
+							right_ring="Niqmaddu Ring",
 							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+5','Weapon skill damage +10%','Damage taken-1%',}},}
 							   
 		sets.Kaiten.Accuracy = {range="Cibitshavore",ammo="Tulfaire arrow",
@@ -294,7 +317,7 @@ function get_sets()
 	
 		sets.JA.Meditate = {head="Wakido kabuto",
 							hands="Sakonji Kote",
-							back="Takaha Mantle"}
+							back={ name="Smertrios's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
 							
 		sets.JA.Meikyo = {feet="Sakonji sune-ate"}
 end

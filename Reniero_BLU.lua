@@ -88,7 +88,7 @@ function get_sets()
 		waist="Flume Belt",
 		left_ear="Genmei Earring",
 		right_ear="Ethereal Earring",
-		left_ring="Vocane Ring",
+		left_ring="Gelatinous Ring +1",
 		right_ring="Gelatinous Ring +1",
 		back="Engulfer Cape +1",
 	}
@@ -123,7 +123,7 @@ function get_sets()
 		legs={ name="Herculean Trousers", augments={'"Triple Atk."+3','STR+8','Accuracy+10','Attack+12',}},
 		feet={ name="Herculean Boots", augments={'Accuracy+26','"Triple Atk."+3','DEX+8',}},
 		neck="Lissome Necklace",
-		waist="Kentarch Belt",
+		waist="Reiki Yotai",
 		left_ear="Cessance Earring",
 		right_ear="Suppanomimi",
 		left_ring="Epona's Ring",
@@ -211,7 +211,7 @@ function get_sets()
 		waist="Flume Belt",
 		left_ear="Cessance Earring",
 		right_ear="Genmei Earring",
-		left_ring="Vocane Ring",
+		left_ring="Gelatinous Ring +1",
 		right_ring="Defending Ring",
 		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+4','"Store TP"+10',}},
 	}
@@ -227,7 +227,7 @@ function get_sets()
 		waist="Flume Belt",
 		left_ear="Cessance Earring",
 		right_ear="Genmei Earring",
-		left_ring="Vocane Ring",
+		left_ring="Gelatinous Ring +1",
 		right_ring="Defending Ring",
 		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+4','"Store TP"+10',}},
 	}
@@ -333,7 +333,7 @@ function get_sets()
 		hands={ name="Adhemar Wristbands", augments={'DEX+10','AGI+10','Accuracy+15',}},
 		legs={ name="Herculean Trousers", augments={'Attack+28','Weapon skill damage +3%','DEX+8',}},
 		feet="Thereoid Greaves",
-		neck="Light Gorget",
+		neck="Fotia Gorget",
 		waist="Fotia Belt",
 		left_ear="Brutal Earring",
 		right_ear="Moonshade Earring",
@@ -368,19 +368,19 @@ function get_sets()
 	Expiacion_ind = 1
 
 	sets.Expiacion.Attack = {
-		ammo="Cheruski Needle",
+		ammo="Ginsen",
 		head={ name="Herculean Helm", augments={'Attack+25','Weapon skill damage +4%','Accuracy+5',}},
-		body="Assim. Jubbah +1",
+		body={ name="Herculean Vest", augments={'Accuracy+20','Weapon skill damage +4%','STR+5','Attack+14',}},
 		hands="Jhakri Cuffs +1",
 		legs={ name="Herculean Trousers", augments={'Attack+28','Weapon skill damage +3%','DEX+8',}},
-		feet={ name="Herculean Boots", augments={'Accuracy+26','"Triple Atk."+3','DEX+8',}},
-		neck="Ire Torque +1",
-		waist="Grunfeld Rope",
-		left_ear="Brutal Earring",
-		right_ear="Cessance Earring",
-		left_ring="Ifrit Ring",
-		right_ring="Apate Ring",
-		back="Buquwik Cape",
+		feet={ name="Herculean Boots", augments={'Attack+9','Weapon skill damage +3%','DEX+4','Accuracy+11',}},
+		neck="Fotia Gorget",
+		waist="Fotia Belt",
+		left_ear="Ishvara Earring",
+		right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		left_ring="Shukuyu Ring",
+		right_ring="Karieyh Ring",
+		back={ name="Rosmerta's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+4','"Store TP"+10',}},
 	}
 
 	sets.Expiacion.Accuracy = {
@@ -539,19 +539,19 @@ function get_sets()
 	MAB_ind = 1
 
 	sets.BlueMagic.INT.MAB = {
-		ammo = "Pemphredo Tathlum",
-		head = HerculeanHelm.Nuke,
-		neck = "Sanctity Necklace",
-		ear1 = "Hermetic Earring",
-		ear2 = "Friomisi earring",
-		body = "Jhakri Robe +2",
-		hands = "Jhakri Cuffs +2",
-		ring1 = "Shiva Ring +1",
-		ring2 = "Acumen Ring",
-		back = Rosmerta.Nuke,
-		waist = "Eschan Stone",
-		legs = "Amalric Slops",
-		feet = "Jhakri Pigaches +1"
+		ammo="Hydrocera",
+		head="Jhakri Coronal +1",
+		body="Amalric Doublet",
+		hands="Amalric Gages",
+		legs={ name="Telchine Braconi", augments={'Pet: "Regen"+2','Pet: Damage taken -4%',}},
+		feet="Jhakri Pigaches +1",
+		neck="Atzintli Necklace",
+		waist="Eschan Stone",
+		left_ear="Friomisi Earring",
+		right_ear="Hecate's Earring",
+		left_ring="Strendu Ring",
+		right_ring="Acumen Ring",
+		back="Toro Cape",
 	}
 	
 	sets.BlueMagic.INT.MACC = {

@@ -112,8 +112,8 @@ function init_gear_sets()
 
     -- Fast cast sets for spells
     sets.precast.FastCast = {head="Welkin Crown",
-		neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchntr. Earring +1",
-		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Prolix Ring",
+		neck="Orunmila's Torque",ear1="Loquacious earring",ear2="Enchntr. Earring +1",
+		body="Inyanga Jubbah +2",hands="Leyline Gloves",ring1="Kishar Ring",ring2="Rahab Ring",
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},waist="Witful Belt",}
 
     sets.precast.FastCast.Cure = set_combine(sets.precast.FastCast, {back="Pahtli Cape",legs="Doyen Pants"})
@@ -174,7 +174,7 @@ function init_gear_sets()
 
     -- General set for recast times.
     sets.midcast.FastRecast = {    head="Vanya Hood",
-		neck="Voltsurge Torque",ear1="Loquacious earring",ear2="Enchntr. Earring +1",
+		neck="Orunmila's Torque",ear1="Loquacious earring",ear2="Enchntr. Earring +1",
 		body="Shango Robe",hands="Gende. Gages",ring1="Kishar Ring",ring2="Weather. Ring",
 		back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},waist="Witful Belt",}
         

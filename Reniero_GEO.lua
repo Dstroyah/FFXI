@@ -70,18 +70,18 @@ function init_gear_sets()
     -- Fast cast sets for spells
 
     sets.precast.FC = {
-        main="Grioavolr",
+        main="Solstice",
         head="Welkin Crown",
         ear2="Loquacious Earring",
         hands="Merlinic Dastanas",
-        --body="Vanir Cotehardie",
+        body={ name="Telchine Chas.", augments={'"Fast Cast"+2',}},
         ring1="Prolix Ring",
 		ring2="Kishar Ring",
         back="Swith Cape",
         waist="Witful Belt",
         legs="Psycloth Lappas",
         feet="Merlinic Crackows",
-		neck="Voltsurge Torque"
+		neck="Orunmila's Torque"
     }
 
     sets.precast.FC.Cure = set_combine(sets.precast.FC, {
@@ -180,9 +180,14 @@ function init_gear_sets()
 
     sets.midcast.Cure = set_combine(sets.midcast.FastRecast, {
         main="Vadose Rod",
+		sub="Genmei Shield",
         neck="Incanter's Torque",
+		body="Vanya Robe",
         hands="Telchine Gloves",
-    	back="Solemnity Cape",
+    	back="Tempered Cape",
+		ring1="Lebeche Ring",
+		waist="Bishop's Sash",
+		ring2="Stikini Ring",
         legs="Telchine Braconi"
     })
     
@@ -198,11 +203,11 @@ function init_gear_sets()
 		range="Dunna",
 		head="Jhakri Coronal +1",
 		body="Amalric Doublet",
-		hands="Jhakri Cuffs +1",
+		hands="Amalric Gages",
 		legs="Jhakri Slops",
 		feet="Jhakri Pigaches +1",
 		neck="Atzintli Necklace",
-		waist="Luminary Sash",
+		waist="Eschan Stone",
 		left_ear="Friomisi Earring",
 		right_ear="Hecate's Earring",
 		left_ring="Jhakri Ring",
@@ -246,20 +251,20 @@ function init_gear_sets()
     })
 
     sets.midcast.Macc = { 
-        main="Marin Staff",
-		sub="Enki Strap",
-		range="Dunna",
-		head="Jhakri Coronal +1",
-		body="Jhakri Robe +1",
+        main="Daybreak",
+		sub="Genmei Shield",
+		ammo="Hydrocera",
+		head="Jhakri Coronal +2",
+		body="Shamash Robe",
 		hands="Jhakri Cuffs +1",
-		legs="Jhakri Slops",
+		legs="Jhakri Slops +1",
 		feet="Jhakri Pigaches +1",
 		neck="Erra Pendant",
 		waist="Luminary Sash",
 		left_ear="Dignitary's Earring",
 		right_ear="Gwati Earring",
 		left_ring="Sangoma Ring",
-		right_ring="Jhakri Ring",
+		right_ring="Stikini Ring",
 		back={ name="Nantosuelta's Cape", augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','Pet: "Regen"+10',}},
     }
     sets.midcast.Absorb = set_combine(sets.midcast.Macc, {
@@ -279,6 +284,7 @@ function init_gear_sets()
         ear2="Hirudinea Earring",
         ring1="Evanescence Ring",
         ring2="Excelsis Ring",
+		waist="Fucho-no-obi",
         body="Geomancy tunic",
         legs="Azimuth Tights +1",
 		feet="Merlinic Crackows"
@@ -323,11 +329,11 @@ function init_gear_sets()
 
     -- Idle sets
     sets.idle = {
-        main="Solstice",
+        main="Daybreak",
 		sub="Genmei Shield",
 		range="Dunna",
 		head="Telchine Cap",
-		body="Mallquis Saio +1",
+		body="Mallquis Saio +2",
 		hands="Geomancy Mitaines +1",
 		legs="Telchine Braconi",
 		feet="Geomancy Sandals",
@@ -336,7 +342,7 @@ function init_gear_sets()
 		left_ear="Genmei Earring",
 		right_ear="Handler's Earring",
 		left_ring="Defending Ring",
-		right_ring="Vocane Ring",
+		right_ring="Gelatinous Ring +1",
 		back="Nantosuelta's Cape"
     }
     sets.idle.PDT = set_combine(sets.idle, {
