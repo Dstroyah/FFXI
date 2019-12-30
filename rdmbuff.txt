@@ -1,0 +1,17 @@
+input /ja "Composure" <me>
+wait 5
+input /ma "Refresh II" <me>
+wait 5
+input /ma "Aquaveil" <me>
+wait 5
+input /ma "Phalanx" <me>
+wait 5
+input /ma "Temper" <me>
+wait 5
+input /ma "Haste II" <me>
+wait 5
+input /ma "Enfire" <me>
+wait 5
+input /ma "Blink" <me>
+wait 5
+input /ma "Stoneskin" <me>
