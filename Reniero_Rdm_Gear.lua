@@ -146,9 +146,9 @@ function init_gear_sets()
 				ammo		=	"Homiliary",
 				head		=	"Vanya Hood",
 				body		=	"Gende. Bilaut +1",
-				hands		=	"Telchine Gloves", 
-				legs		=	"Atrophy Tights +1",
-				feet		=	"Vitiation Boots +1",
+				hands		=	"Kaykaus Cuffs", 
+				legs		=	"Atrophy Tights +2",
+				feet		=	"Vitiation Boots +3",
 				neck		=	"Nodens Gorget",
 				waist		=	"Luminary Sash",
 				left_ear	=	"Mendi. Earring",
@@ -211,8 +211,8 @@ function init_gear_sets()
 	sets.midcast.Protect = {ring2="Sheltered Ring"}
 	sets.midcast.Shell = {ring2="Sheltered Ring"}
 	sets.midcast.BoostStat = {hands="Vitiation Gloves +2"}
-	sets.midcast.Enspell = {head="Umuthi Hat", hands="Vitiation Gloves +2", legs="Atrophy Tights +1", neck="Incanter's Torque", back="Ghostfyre Cape"}
-	sets.midcast.Temper = {head="Umuthi Hat", hands="Vitiation Gloves +2", legs="Atrophy Tights +1", neck="Incanter's Torque", back="Ghostfyre Cape"}
+	sets.midcast.Enspell = {head="Umuthi Hat", hands="Vitiation Gloves +2", legs="Atrophy Tights +2", neck="Incanter's Torque", back="Ghostfyre Cape"}
+	sets.midcast.Temper = {head="Umuthi Hat", hands="Vitiation Gloves +2", legs="Atrophy Tights +2", neck="Incanter's Torque", back="Ghostfyre Cape"}
 	
 	sets.midcast['Enfeebling Magic'] = {
 				main		=	"Grioavolr",
@@ -222,7 +222,7 @@ function init_gear_sets()
 				body		=	"Atrophy Tabard +2",
 				hands		=	"Kaykaus Cuffs",
 				legs		=	"Chironic Hose",
-				feet		=	"Vitiation Boots +2",
+				feet		=	"Vitiation Boots +3",
 				neck		=	"Duelist's Torque +1",
 				waist		=	"Luminary Sash",
 				left_ear	=	"Snotra Earring",
@@ -276,7 +276,7 @@ function init_gear_sets()
 						body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 						hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 						legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-						feet={ name="Vitiation Boots +2", augments={'Immunobreak Chance',}},
+						feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
 						neck="Stoicheion Medal",
 						waist="Eschan Stone",
 						left_ear="Friomisi Earring",
@@ -428,7 +428,7 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Naegling = {main="Naegling",sub="Genmei Shield"}
 	sets.weapons.Daybreak = {main="Daybreak",sub="Genmei Shield"}
-	sets.weapons.DualWeapons = {main="Sequence",sub="Almace"}
+	sets.weapons.DualWeapons = {main="Naegling",sub="Colada"}
 	sets.weapons.DualClubs = {main="Nehushtan",sub="Nehushtan"}
 	sets.weapons.DualAlmace = {main="Almace",sub="Sequence"}
 

@@ -21,9 +21,9 @@ function user_setup()
 	send_command('bind @` gs c cycle RuneElement')
 	send_command('bind ^` gs c RuneElement')
 	send_command('bind @pause gs c toggle AutoRuneMode')
-	send_command('bind ^delete input /ja "Provoke" <stnpc>')
-	send_command('bind !delete input /ma "Cure IV" <stal>')
-	send_command('bind @delete input /ma "Flash" <stnpc>')
+	--send_command('bind ^delete input /ja "Provoke" <stnpc>')
+	--send_command('bind !delete input /ma "Cure IV" <stal>')
+	--send_command('bind @delete input /ma "Flash" <stnpc>')
 	send_command('bind ^\\\\ input /ma "Protect IV" <t>')
 	send_command('bind @\\\\ input /ma "Shell V" <t>')
 	send_command('bind !\\\\ input /ma "Crusade" <me>')
@@ -55,12 +55,12 @@ function init_gear_sets()
 					waist="Kasiri Belt", --3
 		}
 		 
-    sets.Enmity.SIRD = {ammo="Staunch Tathlum",
+    sets.Enmity.SIRD = {ammo="Staunch Tathlum +1",
 		head="Meghanada Visor +2",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Trux Earring",
 		body="Emet Harness +1",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Moonbeam Ring",
 		back=gear.enmity_jse_back,waist="Rumination Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
 
-    sets.Enmity.DT = {ammo="Staunch Tathlum",
+    sets.Enmity.DT = {ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
@@ -121,7 +121,6 @@ function init_gear_sets()
 								ear1="Hecate's Earring",
 								ear2="Friomisi Earring",
 								ring1="Acumen Ring",
-								ring2="Warp Ring",
 								back="Toro Cape",}
 
 	sets.precast.JA['Swipe'] = sets.precast.JA['Lunge']
@@ -154,24 +153,33 @@ function init_gear_sets()
 	sets.precast.JA['Violent Flourish'] = {}
 		
 	-- Fast cast sets for spells
-    sets.precast.FC = {	ammo="Impatiens",
-						head="Rune. Bandeau +2",
-						body={ name="Taeon Tabard", augments={'"Fast Cast"+5','Phalanx +3',}},
-						hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},
-						legs="Aya. Cosciales +2",
-						feet="Carmine Greaves",
-						neck="Orunmila's Torque",
+    sets.precast.FC = {	ammo="Aqreqaq Bomblet", 
+						head="Rune. Bandeau +2", --12%
+						body={ name="Taeon Tabard", augments={'"Fast Cast"+5','Phalanx +3',}},  --9%
+						hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},  --8%
+						legs="Aya. Cosciales +2",  --6%
+						feet="Carmine Greaves",  --7%
+						neck="Orunmila's Torque",  --5%
 						waist="Kasiri Belt",
-						ear2="Loquac. Earring",
-						ear1="Odnowa Earring +1",
-						left_ring="Kishar Ring",
-						right_ring="Meridian Ring",
-						back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},}
+						ear2="Eabani Earring",
+						ear1="Odnowa Earring +1", 
+						ring1="Meridian Ring",
+						ring2="Moonbeam Ring",
+						back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},} --10%
 			
-	sets.precast.FC.DT = {ammo="Staunch Tathlum",
-        head="Rune. Bandeau +2",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
-        body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
-        back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
+	sets.precast.FC.DT = {	ammo="Aqreqaq Bomblet", 
+						head="Rune. Bandeau +2", --12%
+						body={ name="Taeon Tabard", augments={'"Fast Cast"+5','Phalanx +3',}},  --9%
+						hands={ name="Leyline Gloves", augments={'Accuracy+15','Mag. Acc.+15','"Mag.Atk.Bns."+15','"Fast Cast"+3',}},  --8%
+						legs="Aya. Cosciales +2",  --6%
+						feet="Carmine Greaves",  --7%
+						neck="Orunmila's Torque",  --5%
+						waist="Kasiri Belt",
+						ear2="Eabani Earring",
+						ear1="Odnowa Earring +1", 
+						ring1="Meridian Ring",
+						ring2="Moonbeam Ring",
+						back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','"Fast Cast"+10','Phys. dmg. taken-10%',}},} --10%
 			
     sets.precast.FC['Enhancing Magic'] = set_combine(sets.precast.FC, {waist="Siegel Sash", legs="Futhark Trousers +1"})
     sets.precast.FC.Utsusemi = set_combine(sets.precast.FC, {neck='Magoraga beads', back="Mujin Mantle"})
@@ -179,8 +187,8 @@ function init_gear_sets()
 
 	-- Weaponskill sets
 	sets.precast.WS = {	ammo="Knobkierrie",
-						head="Herculean Helm",
-						body={ name="Adhemar Jacket", augments={'DEX+10','AGI+10','Accuracy+15',}},
+						head={ name="Herculean Helm", augments={'Attack+25','Weapon skill damage +4%','Accuracy+5',}},
+						body={ name="Adhemar Jacket", augments={'STR+10','DEX+10','Attack+15',}},
 						hands="Meg. Gloves +2",
 						legs={ name="Herculean Trousers", augments={'Attack+28','Weapon skill damage +3%','DEX+8',}},
 						feet={ name="Herculean Boots", augments={'Accuracy+26','"Triple Atk."+3','DEX+8',}},
@@ -209,13 +217,12 @@ function init_gear_sets()
             back=gear.stp_jse_back,waist="Fotia Belt",legs="Meg. Chausses +2",feet=gear.herculean_acc_feet}
 
     sets.precast.WS['Resolution'] = set_combine(sets.precast.WS,{
-						ammo="Seeth. Bomblet +1",
-						head="Adhemar Bonnet",
+						head={ name="Lustratio Cap +1", augments={'Attack+20','STR+8','"Dbl.Atk."+3',}},
 						ring2="Niqmaddu Ring",
 						ear1="Sherida Earring",
 						hands={ name="Herculean Gloves", augments={'Accuracy+24 Attack+24','"Triple Atk."+3','DEX+4',}},
 						legs="Meg. Chausses +2",
-						feet="Lustratio Leggings",
+						feet={ name="Lustra. Leggings +1", augments={'HP+65','STR+15','DEX+15',}},
 						back={ name="Ogma's cape", augments={'STR+20','Accuracy+20 Attack+20','STR+5','"Dbl.Atk."+10',}},
 	})
     sets.precast.WS['Resolution'].Acc = set_combine(sets.precast.WS.Acc,{})
@@ -224,11 +231,11 @@ function init_gear_sets()
 
     sets.precast.WS['Dimidiation'] = set_combine(sets.precast.WS,{
 						body={ name="Herculean Vest", augments={'Accuracy+20','Weapon skill damage +4%','STR+5','Attack+14',}},
-						feet="Lustratio Leggings",
+						legs={ name="Lustr. Subligar +1", augments={'Attack+20','STR+8','"Dbl.Atk."+3',}},
+						feet={ name="Lustra. Leggings +1", augments={'HP+65','STR+15','DEX+15',}},
 						ring1="Niqmaddu Ring",
 						ear1="Sherida Earring",
 						back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','Weapon skill damage +10%',}},
-						waist="Grunfeld Rope",
 	})
     sets.precast.WS['Dimidiation'].Acc = set_combine(sets.precast.WS.Acc,{head="Lilitu Headpiece",legs=gear.herculean_wsd_legs,feet=gear.herculean_wsd_feet})
 	sets.precast.WS['Dimidiation'].HighAcc = set_combine(sets.precast.WS.HighAcc,{legs=gear.herculean_wsd_legs,feet=gear.herculean_wsd_feet})
@@ -251,7 +258,7 @@ function init_gear_sets()
             body="Dread Jupon",hands="Leyline Gloves",ring1="Lebeche Ring",ring2="Kishar Ring",
             back="Moonlight Cape",waist="Flume Belt +1",legs="Rawhide Trousers",feet="Carmine Greaves +1"}
 			
-	sets.midcast.FastRecast.DT = {ammo="Staunch Tathlum",
+	sets.midcast.FastRecast.DT = {ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
@@ -294,7 +301,7 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'].SIRD = set_combine(sets.Enmity.SIRD, {})
 	sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
 
-    sets.midcast.Cure = {ammo="Staunch Tathlum",
+    sets.midcast.Cure = {ammo="Staunch Tathlum +1",
         head="Carmine Mask +1",neck="Phalaina Locket",ear1="Mendi. Earring",ear2="Roundel Earring",
         body="Vrikodara Jupon",hands="Buremte Gloves",ring1="Lebeche Ring",ring2="Janniston Ring",
         back="Tempered Cape +1",waist="Luminary Sash",legs="Carmine Cuisses +1",feet="Skaoi Boots"}
@@ -332,7 +339,7 @@ function init_gear_sets()
     sets.idle.Sphere = set_combine(sets.idle,{body="Mekosu. Harness"})
 			
 	sets.idle.Tank = {
-					ammo="Staunch Tathlum",
+					ammo="Staunch Tathlum +1",
 					head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
 					body={ name="Futhark Coat +3", augments={'Enhances "Elemental Sforzo" effect',}},
 					hands={ name="Herculean Gloves", augments={'Accuracy+24 Attack+24','"Triple Atk."+3','DEX+4',}},
@@ -347,7 +354,7 @@ function init_gear_sets()
 					back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
 		
-	sets.idle.KiteTank = {ammo="Staunch Tathlum",
+	sets.idle.KiteTank = {ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Vim Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
         body="Futhark Coat +3",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Carmine Cuisses +1",feet="Hippo. Socks +1"}
@@ -375,74 +382,74 @@ function init_gear_sets()
 	
 	-- Defense Sets
 	
-	sets.defense.PDT = {	ammo="Staunch Tathlum",
-							head="Turms Cap",
-							body="Runeist's Coat +3",
+	sets.defense.PDT = {	ammo="Staunch Tathlum +1",
+							head="Turms Cap +1",
+							body="Ashera Harness",
 							hands="Turms Mittens +1",
 							legs="Eri. Leg Guards +1",
 							feet="Turms Leggings +1",
 							neck="Futhark Torque +1",
 							waist="Flume Belt +1",
 							ear1="Odnowa Earring +1",
-							ear2="Genmei Earring",
-							left_ring="Defending Ring",
-							right_ring="Gelatinous Ring +1",
+							ear2="Eabani Earring",
+							ring1="Defending Ring",
+							ring2="Moonbeam Ring",
 							back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	}
-	sets.defense.PDT_HP = {ammo="Staunch Tathlum",
+	sets.defense.PDT_HP = {ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 		
-	sets.defense.MDT = {	ammo="Staunch Tathlum",
-							head="Turms Cap",
+	sets.defense.MDT = {	ammo="Staunch Tathlum +1",
+							head="Turms Cap +1",
 							body="Runeist's Coat +3",
 							hands="Turms Mittens +1",
 							legs="Eri. Leg Guards +1",
 							feet="Turms Leggings +1",
 							neck="Futhark Torque +1",
 							waist="Flume Belt +1",
-							right_ear="Hearty Earring",
-							left_ear="Odnowa Earring +1",
-							left_ring="Defending Ring",
-							right_ring="Gelatinous Ring +1",
+							ear1="Hearty Earring",
+							ear2="Odnowa Earring +1",
+							ring1="Defending Ring",
+							ring2="Gelatinous Ring +1",
 							back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	
 	}
-	sets.defense.MDT_HP = {ammo="Staunch Tathlum",
+	sets.defense.MDT_HP = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Engraved Belt",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 	
-	sets.defense.BDT = {ammo="Staunch Tathlum",
+	sets.defense.BDT = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Shadow Ring",
         back="Moonlight Cape",waist="Engraved Belt",legs=gear.herculean_dt_legs,feet="Erilaz Greaves +1"}
-	sets.defense.BDT_HP = {ammo="Staunch Tathlum",
+	sets.defense.BDT_HP = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Runeist's Coat +3",hands=gear.herculean_dt_hands,ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Engraved Belt",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 	
-	sets.defense.MEVA = {ammo="Staunch Tathlum",
+	sets.defense.MEVA = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Purity Ring",ring2="Vengeful Ring",
         back=gear.enmity_jse_back,waist="Engraved Belt",legs="Rune. Trousers +1",feet="Erilaz Greaves +1"}
-	sets.defense.MEVA_HP = {ammo="Staunch Tathlum",
+	sets.defense.MEVA_HP = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Moonbeam Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Engraved Belt",legs="Rune. Trousers +1",feet="Erilaz Greaves +1"}
 		
-	sets.defense.Death = {ammo="Staunch Tathlum",
+	sets.defense.Death = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Warder's Charm +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Purity Ring",ring2="Vengeful Ring",
         back=gear.enmity_jse_back,waist="Engraved Belt",legs="Rune. Trousers +1",feet="Erilaz Greaves +1"}
 
-	sets.defense.DTCharm = {ammo="Staunch Tathlum",
+	sets.defense.DTCharm = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Defending Ring",ring2="Dark Ring",
         back=gear.enmity_jse_back,waist="Engraved Belt",legs="Rune. Trousers +1",feet="Erilaz Greaves +1"}
 		
-	sets.defense.Charm = {ammo="Staunch Tathlum",
+	sets.defense.Charm = {ammo="Staunch Tathlum +1",
         head="Erilaz Galea +1",neck="Unmoving Collar +1",ear1="Odnowa Earring +1",ear2="Sanare Earring",
         body="Runeist's Coat +3",hands="Erilaz Gauntlets +1",ring1="Purity Ring",ring2="Vengeful Ring",
         back=gear.enmity_jse_back,waist="Engraved Belt",legs="Rune. Trousers +1",feet="Erilaz Greaves +1"}
@@ -455,18 +462,18 @@ function init_gear_sets()
 	-- Engaged sets
 	--------------------------------------
 
-    sets.engaged = {	ammo="Ginsen",
+    sets.engaged = {	ammo="Yamarang",
 						head="Aya. Zucchetto +2",
-						body="Ayanmo Corazza +2",
-						hands={ name="Adhemar Wristbands +1", augments={'STR+12','DEX+12','Attack+20',}},
+						body="Ashera Harness",
+						hands={ name="Adhemar Wristbands +1", augments={'DEX+12','AGI+12','Accuracy+20',}},
 						legs="Meg. Chausses +2",
 						feet={ name="Herculean Boots", augments={'Accuracy+26','"Triple Atk."+3','DEX+8',}},
 						neck="Anu Torque",
 						waist="Ioskeha Belt",
-						left_ear="Telos Earring",
-						right_ear="Sherida Earring",
-						left_ring="Defending Ring",
-						right_ring="Niqmaddu Ring",
+						ear1="Telos Earring",
+						ear2="Sherida Earring",
+						ring1="Defending Ring",
+						ring2="Niqmaddu Ring",
 						back={ name="Ogma's cape", augments={'DEX+20','Accuracy+20 Attack+20','"Store TP"+10','Phys. dmg. taken-10%',}},
 	
 	}
@@ -507,9 +514,9 @@ function init_gear_sets()
             body="Ayanmo Corazza +2",hands="Meg. Gloves +2",ring1="Defending Ring",ring2="Patricius Ring",
             back="Moonlight Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
 	
-    sets.engaged.Tank = {	ammo="Staunch Tathlum",
-							head="Turms Cap",
-							body="Runeist's Coat +3",
+    sets.engaged.Tank = {	ammo="Staunch Tathlum +1",
+							head="Turms Cap +1",
+							body="Ashera Harness",
 							hands="Turms Mittens +1",
 							legs="Eri. Leg Guards +1",
 							feet="Turms Leggings +1",
@@ -517,8 +524,8 @@ function init_gear_sets()
 							waist="Flume Belt +1",
 							ear1="Odnowa Earring +1",
 							ear2="Genmei Earring",
-							left_ring="Defending Ring",
-							right_ring="Gelatinous Ring +1",
+							ring1="Defending Ring",
+							ring2="Gelatinous Ring +1",
 							back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
 	
 	}

@@ -35,7 +35,7 @@ function init_gear_sets()
 	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Berserk'] = {back="Cichol's Mantle"}
+	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pummeler's Lorica +1"}
 	sets.precast.JA['Warcry'] = {}
 	sets.precast.JA['Defender'] = {}
 	sets.precast.JA['Aggressor'] = {}
@@ -254,9 +254,18 @@ function init_gear_sets()
 					right_ring="Niqmaddu Ring",
 					back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},}
     sets.engaged.SomeAcc = {ammo="Ginsen",
-		head="Flam. Zucchetto +2",neck="Combatant's Torque",ear1="Brutal Earring",ear2="Cessance Earring",
-		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Flamma Ring",ring2="Niqmaddu Ring",
-		back="Cichol's Mantle",waist="Ioskeha Belt",legs="Sulev. Cuisses +2",feet="Flam. Gambieras +2"}
+							head="Flam. Zucchetto +2",
+							neck="Combatant's Torque",
+							ear1="Brutal Earring",
+							ear2="Cessance Earring",
+							body=gear.valorous_wsd_body,
+							hands=gear.valorous_acc_hands,
+							ring1="Flamma Ring",
+							ring2="Niqmaddu Ring",
+							back="Cichol's Mantle",
+							waist="Ioskeha Belt",
+							legs="Sulev. Cuisses +2",
+							feet="Flam. Gambieras +2"}
 	sets.engaged.Acc = {ammo="Ginsen",
 		head="Flam. Zucchetto +2",neck="Combatant's Torque",ear1="Digni. Earring",ear2="Telos Earring",
 		body=gear.valorous_wsd_body,hands=gear.valorous_acc_hands,ring1="Flamma Ring",ring2="Niqmaddu Ring",
