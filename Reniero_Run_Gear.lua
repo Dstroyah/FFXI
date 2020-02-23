@@ -36,6 +36,8 @@ function user_setup()
 	send_command('bind !r gs c weapons Lionheart;gs c update')
 	
 	select_default_macro_book()
+	
+	send_command('wait 6;input /lockstyleset 3')
 end
 
 function init_gear_sets()

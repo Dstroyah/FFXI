@@ -205,8 +205,8 @@ function init_gear_sets()
      sets.resting = {}
            
 	-- Idle sets
-	sets.idle = {ammo="Staunch Tathlum",
-				head="Valorous Mask",neck="Twilight Torque",ear1="steelflash Earring",ear2="bladeborn Earring",
+	sets.idle = {ammo="Staunch Tathlum +1",
+				head="Valorous Mask",neck="Loricate Torque +1",ear1="steelflash Earring",ear2="bladeborn Earring",
 				body="Sulevia's Plate. +1",hands="Sulev. Gauntlets +2",ring1="Chirich Ring",ring2="Rajas Ring",
 				back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},waist="ioskeha Belt",legs="Sulevi. Cuisses +1",feet="Hermes' Sandals"}
 		

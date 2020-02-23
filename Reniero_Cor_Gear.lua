@@ -7,7 +7,7 @@ function user_setup()
     state.IdleMode:options('Normal', 'PDT', 'Refresh')
 	state.ExtraMeleeMode = M{['description']='Extra Melee Mode', 'None', 'DWMax'}
 	state.Weapons:options('Default','DualWeapons','DualSavageWeapons','DualLeadenRanged','DualLeadenMelee','DualLeadenMeleeAcc','DualKustawi','None')
-	state.CompensatorMode:options('300','1000','Never','Always')
+	state.CompensatorMode:options('Always','300','1000','Never')
 
     gear.RAbullet = "Titanium Bullet"
     gear.WSbullet = "Eminent Bullet"
@@ -43,6 +43,8 @@ function user_setup()
 	send_command('bind @pause roller roll')
 
     select_default_macro_book()
+	
+	send_command('wait 6;input /lockstyleset 9')
 end
 
 -- Define sets and vars used by this job file.
@@ -73,7 +75,7 @@ function init_gear_sets()
 			right_ear="Odnowa Earring +1",
 			left_ring="Barataria Ring",
 			right_ring="Defending Ring",
-			back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','"Store TP"+10',}},
+			back={ name="Camulus's Mantle", augments={'INT+20','Eva.+8 /Mag. Eva.+8','"Snapshot"+10',}},
 	}
 
     sets.precast.LuzafRing = {ring2="Luzaf's Ring"}
@@ -87,7 +89,7 @@ function init_gear_sets()
     sets.precast.CorsairShot = {ammo=gear.QDbullet,
         head={ name="Herculean Helm", augments={'Mag. Acc.+5 "Mag.Atk.Bns."+5','"Dbl.Atk."+3','INT+7','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 		body={ name="Samnuha Coat", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+10','"Fast Cast"+2',}},
-		hands="Carmine Fin. Ga.",
+		hands="Carmine Fin. Ga. +1",
 		legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+22','Weapon skill damage +2%','CHR+4','Mag. Acc.+3',}},
 		feet="Lanun Bottes +2",
 		neck="Stoicheion Medal",
@@ -141,7 +143,7 @@ function init_gear_sets()
 						neck="Commodore Charm +1",
 						head="Taeon Chapeau", --9/0
 						body="Laksamana's frac +1", --0/20
-						hands="Carmine finger gauntlets", --7/10
+						hands="Carmine finger gauntlets +1", --7/10
 						legs={ name="Adhemar Kecks", augments={'AGI+10','"Rapid Shot"+10','Enmity-5',}}, --9/0
 						feet="Meg. Jam. +2", --10/0
 						back={ name="Camulus's Mantle", augments={'"Snapshot"+9',}}, --10/0
@@ -214,7 +216,7 @@ function init_gear_sets()
 			right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 			left_ring="Dingir Ring",
 			right_ring="Ilabrat Ring",
-			back="Gunslinger's Cape",
+			back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
 	}
 
     sets.precast.WS['Last Stand'].Acc = {ammo=gear.WSbullet,
@@ -236,7 +238,7 @@ function init_gear_sets()
     sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",
 		body={ name="Samnuha Coat", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+10','"Fast Cast"+2',}},
-		hands="Carmine Fin. Ga.",
+		hands={ name="Herculean Gloves", augments={'Weapon skill damage +3%','MND+1','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 		legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+22','Weapon skill damage +2%','CHR+4','Mag. Acc.+3',}},
 		feet="Lanun Bottes +2",
 		neck="Commodore Charm +1",
@@ -245,7 +247,8 @@ function init_gear_sets()
 		right_ear="Moonshade Earring",
 		left_ring="Dingir Ring",
 		ring2="Ilabrat Ring",
-		back="Gunslinger's Cape",}
+		back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
+	}
 
     sets.precast.WS['Leaden Salute'].Acc = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",neck="Sanctity Necklace",ear1="Moonshade Earring",ear2="Friomisi Earring",
@@ -255,7 +258,7 @@ function init_gear_sets()
     sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
 									head={ name="Herculean Helm", augments={'Mag. Acc.+5 "Mag.Atk.Bns."+5','"Dbl.Atk."+3','INT+7','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 									body={ name="Samnuha Coat", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+10','"Fast Cast"+2',}},
-									hands="Carmine Fin. Ga.",
+									hands={ name="Herculean Gloves", augments={'Weapon skill damage +3%','MND+1','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 									legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+22','Weapon skill damage +2%','CHR+4','Mag. Acc.+3',}},
 									feet="Lanun Bottes +2",
 									neck="Commodore Charm +1",
@@ -264,7 +267,8 @@ function init_gear_sets()
 									right_ear="Hecate's Earring",
 									left_ring="Dingir Ring",
 									ring2="Ilabrat Ring",
-									back="Gunslinger's Cape",}
+									back={ name="Camulus's Mantle", augments={'AGI+20','Rng.Acc.+20 Rng.Atk.+20','AGI+10','Weapon skill damage +10%',}},
+	}
 
     sets.precast.WS['Wildfire'].Acc = {ammo=gear.MAbullet,
         head=gear.herculean_nuke_head,neck="Sanctity Necklace",ear1="Crematio Earring",ear2="Friomisi Earring",
