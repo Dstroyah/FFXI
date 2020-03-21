@@ -237,12 +237,12 @@ function init_gear_sets()
 	
     sets.precast.WS['Leaden Salute'] = {ammo=gear.MAbullet,
         head="Pixie Hairpin +1",
-		body={ name="Samnuha Coat", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+10','"Fast Cast"+2',}},
+		body="Lanun Frac +2",
 		hands={ name="Herculean Gloves", augments={'Weapon skill damage +3%','MND+1','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 		legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+22','Weapon skill damage +2%','CHR+4','Mag. Acc.+3',}},
 		feet="Lanun Bottes +2",
 		neck="Commodore Charm +1",
-		waist="Eschan Stone",
+		waist="Sveltesse Gouriz +1",
 		left_ear="Friomisi Earring",
 		right_ear="Moonshade Earring",
 		left_ring="Dingir Ring",
@@ -257,7 +257,7 @@ function init_gear_sets()
 
     sets.precast.WS['Wildfire'] = {ammo=gear.MAbullet,
 									head={ name="Herculean Helm", augments={'Mag. Acc.+5 "Mag.Atk.Bns."+5','"Dbl.Atk."+3','INT+7','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
-									body={ name="Samnuha Coat", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+10','"Fast Cast"+2',}},
+									body="Lanun Frac +2",
 									hands={ name="Herculean Gloves", augments={'Weapon skill damage +3%','MND+1','Mag. Acc.+15','"Mag.Atk.Bns."+12',}},
 									legs={ name="Herculean Trousers", augments={'"Mag.Atk.Bns."+22','Weapon skill damage +2%','CHR+4','Mag. Acc.+3',}},
 									feet="Lanun Bottes +2",
@@ -386,9 +386,9 @@ function init_gear_sets()
 	sets.weapons.Default = {main="Fettering Blade",sub="Nusku Shield",range="Holliday"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Holliday"}
 	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
-	sets.weapons.DualLeadenRanged = {main="Naegling",sub="Kaja Knife",range="Doomsday"}
-	sets.weapons.DualLeadenMelee = {main="Naegling",sub="Atoyac",range="Doomsday"}
-	sets.weapons.DualLeadenMeleeAcc = {main="Naegling",sub="Blurred Knife +1",range="Doomsday"}
+	sets.weapons.DualLeadenRanged = {main="Naegling",sub="Tauret",range="Molybdosis"}
+	sets.weapons.DualLeadenMelee = {main="Naegling",sub="Atoyac",range="Molybdosis"}
+	sets.weapons.DualLeadenMeleeAcc = {main="Naegling",sub="Blurred Knife +1",range="Molybdosis"}
 	sets.weapons.DualKustawi = {main="Kustawi +1",sub="Kustawi",range="Fomalhaut"}
 	
     -- Engaged sets

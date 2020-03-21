@@ -7,7 +7,7 @@ function user_setup()
     state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Naegling','Daybreak','DualWeapons','DualClubs','DualAlmace')
+	state.Weapons:options('None','Naegling','Daybreak','Maxentius','DualWeapons','DualClubs','DualAlmace')
 	
 	gear.obi_cure_back = "Tempered Cape +1"
 	gear.obi_cure_waist = "Witful Belt"
@@ -85,7 +85,7 @@ function init_gear_sets()
 				hands="Aya. Manopolas +2",
 				ring1="Petrov Ring",
 				ring2="Ilabrat Ring",
-				back="Bleating Mantle",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 				waist="Windbuffet Belt",
 				legs="Carmine Cuisses +1",
 				feet="Carmine Greaves +1"}
@@ -114,7 +114,23 @@ function init_gear_sets()
 				right_ear="Ishvara Earring",
 				left_ring = "Shukuyu Ring",
 				right_ring="Karieyh Ring",
-				back="Bleating Mantle",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
+	
+	sets.precast.WS['Black Halo'] = {
+				ammo="Ginsen",
+				head="Vitiation Chapeau +2",
+				body="Vitiation Tabard +2",
+				hands="Atrophy Gloves +2",
+				legs="Jhakri Slops +2",
+				feet="Ayanmo Gambieras +2",
+				neck="Dls. Torque +1",
+				waist="Fotia Belt",
+				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+				right_ear="Sherida Earring",
+				left_ring = "Shukuyu Ring",
+				right_ring="Karieyh Ring",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 		
 	sets.precast.WS['Sanguine Blade'] = {
@@ -172,7 +188,7 @@ function init_gear_sets()
     sets.midcast.Cure = {
 				main="Daybreak",
 				sub={ name="Beatific Shield +1", augments={'Phys. dmg. taken -3%','Spell interruption rate down -6%',}},
-				ammo="Hydrocera",
+				ammo="Regal Gem",
 				head="Kaykaus Mitra",
 				body={ name="Vitiation Tabard +2", augments={'Enhances "Chainspell" effect',}},
 				hands={ name="Kaykaus Cuffs", augments={'MP+60','MND+10','Mag. Acc.+15',}},
@@ -254,7 +270,7 @@ function init_gear_sets()
 	sets.midcast['Enfeebling Magic'] = {
 				main		=	"Grioavolr",
 				sub			=	"Mephitis Grip",
-				ammo		=	"Hydrocera",
+				ammo		=	"Regal Gem",
 				head		=	"Vitiation Chapeau +2",
 				body		=	"Atrophy Tabard +2",
 				hands		=	"Kaykaus Cuffs",
@@ -323,9 +339,9 @@ function init_gear_sets()
 	sets.midcast['Slow II'].Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {head="Vitiation Chapeau +2"})
 	
     sets.midcast['Elemental Magic'] = {
-						main="Daybreak",
+						main="Maxentius",
 						sub="Beatific Shield +1",
-						ammo="Hydrocera",
+						ammo="Regal Gem",
 						head="Jhakri Coronal +2",
 						body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 						hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
@@ -337,7 +353,7 @@ function init_gear_sets()
 						right_ear="Hecate's Earring",
 						left_ring="Shiva Ring +1",
 						right_ring="Shiva Ring +1",
-						back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+8','"Mag.Atk.Bns."+10',}},
+						back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 		
     sets.midcast['Elemental Magic'].Resistant = {main=gear.grioavolr_nuke_staff,sub="Enki Strap",ammo="Pemphredo Tathlum",
@@ -434,7 +450,7 @@ function init_gear_sets()
 					right_ear	=	"Ethereal Earring",
 					left_ring	=	"Purity Ring",
 					right_ring	=	"Defending Ring",
-					back		=	"Engulfer Cape +1",
+					back		=	{ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 		
 	sets.idle.PDT = {main="Terra's Staff",sub="Oneiros Grip",ammo="Staunch Tathlum",
@@ -482,8 +498,9 @@ function init_gear_sets()
 	-- Weapons sets
 	sets.weapons.Naegling = {main="Naegling",sub="Genmei Shield"}
 	sets.weapons.Daybreak = {main="Daybreak",sub="Genmei Shield"}
+	sets.weapons.Maxentius= {main="Maxentius",sub="Genmei Shield"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Tauret"}
-	sets.weapons.DualClubs = {main="Nehushtan",sub="Nehushtan"}
+	sets.weapons.DualClubs = {main="Maxentius",sub="Tauret"}
 	sets.weapons.DualAlmace = {main="Almace",sub="Sequence"}
 
 	-- Engaged sets
@@ -512,23 +529,23 @@ function init_gear_sets()
 			left_ear	=	"Telos Earring",
 			right_ear	=	"Sherida Earring",
 			right_ring	=	"Chirich Ring",
-			back		=	"Bleating Mantle"
+			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.engaged.DW = {
-			ammo		=	"Ginsen",
-			head		=	{ name="Taeon Chapeau", augments={'Accuracy+14 Attack+14','"Triple Atk."+2',}},
-			body		=	"Malignance Tabard",
-			hands		=	"Carmine Fin. Ga.",
-			left_ring	=	"Hetairoi Ring",     
-			legs		=	{ name="Taeon Tights", augments={'Accuracy+15','"Triple Atk."+1',}},
-			feet		=	{ name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
-			neck		=	"Anu Torque",
-			waist		=	"Windbuffet Belt",
-			left_ear	=	"Telos Earring",
-			right_ear	=	"Sherida Earring",
-			right_ring	=	"Chirich Ring",
-			back		=	"Bleating Mantle"
+			ammo="Ginsen",
+			head="Aya. Zucchetto +2",
+			body="Malignance Tabard",
+			hands={ name="Carmine Fin. Ga.", augments={'Accuracy+10','DEX+10','MND+15',}},
+			legs={ name="Taeon Tights", augments={'Accuracy+15','"Triple Atk."+1',}},
+			feet={ name="Taeon Boots", augments={'Spell interruption rate down -8%','Phalanx +3',}},
+			neck="Anu Torque",
+			waist="Windbuffet Belt",
+			left_ear="Telos Earring",
+			right_ear="Sherida Earring",
+			left_ring="Hetairoi Ring",
+			right_ring="Chirich Ring",
+			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 		
 	sets.engaged.PhysicalDef = {ammo="Ginsen",
