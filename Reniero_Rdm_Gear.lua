@@ -162,7 +162,7 @@ function init_gear_sets()
 				neck="Mizu. Kubikazari",
 				body="Ea Houppelande",
 				hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-				ring1="Mujin Band",
+				ring2="Mujin Band",
 				legs="Ea Slops",
 				feet="Ea Pigaches"
 	}
@@ -191,9 +191,9 @@ function init_gear_sets()
 				ammo="Regal Gem",
 				head="Kaykaus Mitra",
 				body={ name="Vitiation Tabard +2", augments={'Enhances "Chainspell" effect',}},
-				hands={ name="Kaykaus Cuffs", augments={'MP+60','MND+10','Mag. Acc.+15',}},
+				hands={ name="Kaykaus Cuffs +1", augments={'MP+60','MND+10','Mag. Acc.+15',}},
 				legs="Atrophy Tights +2",
-				feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+				feet="Kaykaus Boots",
 				neck="Incanter's Torque",
 				waist="Bishop's Sash",
 				left_ear="Beatific Earring",
@@ -205,13 +205,13 @@ function init_gear_sets()
 		
     sets.midcast.LightWeatherCure = {main="Chatoyant Staff",sub="Curatio Grip",ammo="Hasty Pinion +1",
         head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Gifted Earring",ear2="Mendi. Earring",
-        body="Kaykaus Bliaut",hands="Kaykaus Cuffs",ring1="Janniston Ring",ring2="Menelaus's Ring",
+        body="Kaykaus Bliaut",hands="Kaykaus Cuffs +1",ring1="Janniston Ring",ring2="Menelaus's Ring",
         back="Twilight Cape",waist="Hachirin-no-Obi",legs="Carmine Cuisses +1",feet="Kaykaus Boots"}
 		
 		--Cureset for if it's not light weather but is light day.
     sets.midcast.LightDayCure = {main="Serenity",sub="Curatio Grip",ammo="Hasty Pinion +1",
         head="Gende. Caubeen +1",neck="Incanter's Torque",ear1="Gifted Earring",ear2="Mendi. Earring",
-        body="Kaykaus Bliaut",hands="Kaykaus Cuffs",ring1="Janniston Ring",ring2="Menelaus's Ring",
+        body="Kaykaus Bliaut",hands="Kaykaus Cuffs +1",ring1="Janniston Ring",ring2="Menelaus's Ring",
         back="Twilight Cape",waist="Hachirin-no-Obi",legs="Carmine Cuisses +1",feet="Kaykaus Boots"}
 		
 	sets.midcast.Cursna =  set_combine(sets.midcast.Cure, {neck="Debilis Medallion",hands="Hieros Mittens",
@@ -228,14 +228,14 @@ function init_gear_sets()
 			main		=	"Pukulatmuj +1",
 			--sub			=	"Ammurapi Shield",
 			ammo		=	"Homiliary",
-			head		=	"Telchine Cap",
+			head		=	{name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
 			body		=	"Vitiation Tabard +2",
 			hands		=	"Atrophy Gloves +2",
-			legs		=	"Telchine Braconi",
+			legs		=	{name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 			feet		=	"Lethargy Houseaux +1",
 			neck		=	"Dls. Torque +1",
 			waist		=	"Embla Sash",
-			left_ear	=	"Etiolation Earring",
+			left_ear	=	"Mimir Earring",
 			right_ear	=	"Andoaa Earring",
 			left_ring	=	"Stikini Ring",
 			right_ring	=	"Stikini Ring",
@@ -260,7 +260,7 @@ function init_gear_sets()
 	}
 	sets.midcast.Aquaveil = {head={ name="Amalric Coif", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},hands="Regal Cuffs",waist="Emphatikos Rope",legs="Shedir Seraweels"}
 	sets.midcast.BarElement = {legs="Shedir Seraweels"}
-	sets.midcast.Stoneskin = {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash",legs="Shedir Seraweels"}
+	sets.midcast.Stoneskin = {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash"}
 	sets.midcast.Protect = {ring2="Sheltered Ring"}
 	sets.midcast.Shell = {ring2="Sheltered Ring"}
 	sets.midcast.BoostStat = {hands="Vitiation Gloves +2"}
@@ -272,8 +272,8 @@ function init_gear_sets()
 				sub			=	"Mephitis Grip",
 				ammo		=	"Regal Gem",
 				head		=	"Vitiation Chapeau +2",
-				body		=	"Atrophy Tabard +2",
-				hands		=	"Kaykaus Cuffs",
+				body		=	"Lethargy Sayon +1",
+				hands		=	"Kaykaus Cuffs +1",
 				legs		=	"Chironic Hose",
 				feet		=	"Vitiation Boots +3",
 				neck		=	"Duelist's Torque +1",
@@ -289,17 +289,17 @@ function init_gear_sets()
 				main="Oranyan",
 				sub="Enki Strap",
 				ammo="Regal Gem",
-				head="Befouled Crown",
+				head="Atrophy Chapeau +2",
 				neck="Dls. Torque +1",
 				ear1="Regal Earring",
 				ear2="Digni. Earring",
 				body="Atrophy Tabard +2",
-				hands=gear.chironic_enfeeble_hands,
+				hands="Kaykaus Cuffs +1",
 				ring1="Stikini Ring",
 				ring2="Stikini Ring",
-				back="Sucellos's Cape",
+				back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10',}},
 				waist="Luminary Sash",
-				legs="Psycloth Lappas",
+				legs="Chironic Hose",
 				feet="Vitiation Boots +3"
 	}
 		
@@ -341,7 +341,7 @@ function init_gear_sets()
     sets.midcast['Elemental Magic'] = {
 						main="Maxentius",
 						sub="Beatific Shield +1",
-						ammo="Regal Gem",
+						ammo="Pemphredo Tathlum",
 						head="Jhakri Coronal +2",
 						body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 						hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
@@ -351,19 +351,19 @@ function init_gear_sets()
 						waist="Eschan Stone",
 						left_ear="Friomisi Earring",
 						right_ear="Hecate's Earring",
-						left_ring="Shiva Ring +1",
+						left_ring="Freke Ring",
 						right_ring="Shiva Ring +1",
 						back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
 	}
 		
     sets.midcast['Elemental Magic'].Resistant = {main=gear.grioavolr_nuke_staff,sub="Enki Strap",ammo="Pemphredo Tathlum",
         head=gear.merlinic_nuke_head,neck="Sanctity Necklace",ear1="Regal Earring",ear2="Friomisi Earring",
-        body=gear.merlinic_nuke_body,hands="Amalric Gages +1",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+        body=gear.merlinic_nuke_body,hands="Amalric Gages +1",ring1="Freke",ring2="Shiva Ring +1",
         back="Sucellos's Cape",waist="Yamabuki-no-Obi",legs="Merlinic Shalwar",feet=gear.merlinic_nuke_feet}
 		
     sets.midcast['Elemental Magic'].Fodder = {main=gear.grioavolr_nuke_staff,sub="Zuuxowu Grip",ammo="Dosis Tathlum",
         head=gear.merlinic_nuke_head,neck="Baetyl Pendant",ear1="Crematio Earring",ear2="Friomisi Earring",
-        body=gear.merlinic_nuke_body,hands="Amalric Gages +1",ring1="Shiva Ring +1",ring2="Shiva Ring +1",
+        body=gear.merlinic_nuke_body,hands="Amalric Gages +1",ring1="Freke",ring2="Shiva Ring +1",
         back="Sucellos's Cape",waist=gear.ElementalObi,legs="Merlinic Shalwar",feet=gear.merlinic_nuke_feet}
 
     sets.midcast['Elemental Magic'].Proc = {main=empty, sub=empty,ammo="Impatiens",
@@ -388,7 +388,7 @@ function init_gear_sets()
     sets.midcast.Drain = {
 						main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
 						sub="Genmei Shield",
-						ammo="Hydrocera",
+						ammo="Pemphredo Tathlum",
 						head="Pixie Hairpin +1",
 						body="Shamash Robe",
 						hands="Merlinic Dastanas",
@@ -536,11 +536,11 @@ function init_gear_sets()
 			ammo="Ginsen",
 			head="Aya. Zucchetto +2",
 			body="Malignance Tabard",
-			hands={ name="Carmine Fin. Ga.", augments={'Accuracy+10','DEX+10','MND+15',}},
-			legs={ name="Taeon Tights", augments={'Accuracy+15','"Triple Atk."+1',}},
-			feet={ name="Taeon Boots", augments={'Spell interruption rate down -8%','Phalanx +3',}},
+			hands="Atrophy Gloves +2",
+			legs="Carmine Cuisses +1",
+			feet="Ayanmo Gambieras +2",
 			neck="Anu Torque",
-			waist="Windbuffet Belt",
+			waist="Reiki Yotai",
 			left_ear="Telos Earring",
 			right_ear="Sherida Earring",
 			left_ring="Hetairoi Ring",
@@ -570,6 +570,6 @@ function select_default_macro_book()
 	elseif player.sub_job == 'BLM' then
 		set_macro_page(2, 18)
 	else
-		set_macro_page(1, 18)
+		set_macro_page(2, 18)
 	end
 end

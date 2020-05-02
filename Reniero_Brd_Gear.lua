@@ -34,8 +34,8 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Weapons sets
-	sets.weapons.Aeneas = {main="Ipetam",sub="Genmei Shield"}
-	sets.weapons.DualWeapons = {main="Aeneas",sub="Taming Sari"}
+	sets.weapons.Aeneas = {main="Tauret",sub="Genmei Shield"}
+	sets.weapons.DualWeapons = {main="Tauret",sub="Skinflayer"}
 	sets.weapons.DualSwords = {main="Vampirism",sub="Vampirism"}
 	sets.weapons.DualNukeWeapons = {main="Malevolence",sub="Malevolence"}
 	
@@ -43,17 +43,18 @@ function init_gear_sets()
 
 	-- Fast cast sets for spells
 	sets.precast.FC = {
-			head="Welkin Crown",
-			neck="Orunmila's Torque",
-			ear1="Loquacious earring",
+			ammo="Sapience Orb", --2
+			head="Vanya Hood", --10
+			neck="Orunmila's Torque", --5
+			ear1="Loquacious earring", --2
 			ear2="Enchntr. Earring +1",
-			body="Inyanga Jubbah +2",
-			hands="Leyline Gloves",
-			ring1="Kishar Ring",
-			ring2="Rahab Ring",
-			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}},
-			waist="Witful Belt",
-	}
+			body="Inyanga Jubbah +2", --14
+			hands="Leyline Gloves", --8
+			ring1="Kishar Ring", --4
+			ring2="Rahab Ring", --2
+			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','"Fast Cast"+10',}}, --10
+			waist="Embla Sash", --5
+	} --
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {feet="Vanya Clogs"})
 
@@ -194,7 +195,7 @@ function init_gear_sets()
 			ring2="Stikini Ring",
 			back="Intarabus's Cape",
 			waist="Luminary Sash",
-			legs="Inyanga Shalwar +2",
+			legs="Brioso Cannions +2",
 			feet="Brioso Slippers +2"
 	}
 
@@ -223,18 +224,18 @@ function init_gear_sets()
 			main="Daybreak",
 			sub="Genmei Shield",
 			ammo="Staunch Tathlum +1",
-			head="Inyanga Tiara +2",
+			head={ name="Kaykaus Mitra", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
 			body="Vanya Robe",
-			hands={ name="Kaykaus Cuffs", augments={'MP+60','MND+10','Mag. Acc.+15',}},
-			legs="Brioso Cann. +1",
-			feet="Fili Cothurnes +1",
+			hands="Inyan. Dastanas +1",
+			legs="Kaykaus Tights",
+			feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}},
 			neck="Incanter's Torque",
 			waist="Bishop's Sash",
 			left_ear="Beatific Earring",
 			right_ear="Genmei Earring",
 			left_ring="Sirona's Ring",
 			right_ring="Lebeche Ring",
-			back="Tempered Cape",
+			back={ name="Intarabus's Cape", augments={'CHR+20','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+10','"Fast Cast"+10',}},
 	}
 		
 	sets.Self_Healing = {neck="Phalaina Locket",hands="Buremte Gloves",ring2="Kunaji Ring",waist="Gishdubar Sash"}
@@ -276,11 +277,11 @@ function init_gear_sets()
 			head="Inyanga Tiara +2",
 			body="Ashera Harness",
 			hands="Inyan. Dastanas +1",
-			legs="Brioso Cannions +1",
+			legs="Brioso Cannions +2",
 			feet="Fili Cothurnes +1",
 			neck="Loricate Torque +1",
 			waist="Flume Belt +1",
-			left_ear="Ethereal Earring",
+			left_ear="Odnowa Earring +1",
 			right_ear="Genmei Earring",
 			left_ring="Purity Ring",
 			right_ring="Defending Ring",

@@ -9,8 +9,8 @@ function user_setup()
 	state.Weapons:options('Default','DualWeapons','DualSavageWeapons','DualLeadenRanged','DualLeadenMelee','DualLeadenMeleeAcc','DualKustawi','None')
 	state.CompensatorMode:options('Always','300','1000','Never')
 
-    gear.RAbullet = "Titanium Bullet"
-    gear.WSbullet = "Eminent Bullet"
+    gear.RAbullet = "Chrono Bullet"
+    gear.WSbullet = "Chrono Bullet"
     gear.MAbullet = "Orichalc. Bullet" --For MAB WS, do not put single-use bullets here.
     gear.QDbullet = "Animikii Bullet"
     options.ammo_warning_limit = 15
@@ -310,12 +310,12 @@ function init_gear_sets()
     -- Ranged gear
     sets.midcast.RA = {ammo=gear.RAbullet,
         head="Meghanada Visor +2",
-		body="Nisroch Jerkin",
+		body="Malignance Tabard",
 		hands="Adhemar wristbands",
 		legs={ name="Adhemar Kecks", augments={'AGI+10','Rng.Acc.+15','Rng.Atk.+15',}},
 		feet="Meg. Jam. +2",
-		neck="Marked Gorget",
-		waist="Impulse belt",
+		neck="Iskur Gorget",
+		waist="Reiki Yotai",
 		right_ear="Neritic Earring",
 		left_ear="Telos Earring",
 		left_ring="Dingir Ring",
@@ -383,12 +383,12 @@ function init_gear_sets()
 	sets.DWMax = {ear1="Dudgeon Earring",ear2="Heartseeker Earring",body="Adhemar Jacket +1",hands="Floral Gauntlets",waist="Reiki Yotai"}
 
 	-- Weapons sets
-	sets.weapons.Default = {main="Fettering Blade",sub="Nusku Shield",range="Holliday"}
-	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Holliday"}
-	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Ataktos"}
-	sets.weapons.DualLeadenRanged = {main="Naegling",sub="Tauret",range="Molybdosis"}
-	sets.weapons.DualLeadenMelee = {main="Naegling",sub="Atoyac",range="Molybdosis"}
-	sets.weapons.DualLeadenMeleeAcc = {main="Naegling",sub="Blurred Knife +1",range="Molybdosis"}
+	sets.weapons.Default = {main="Fettering Blade",sub="Nusku Shield",range="Formalhaut"}
+	sets.weapons.DualWeapons = {main="Naegling",sub="Blurred Knife +1",range="Formalhaut"}
+	sets.weapons.DualSavageWeapons = {main="Naegling",sub="Blurred Knife +1",range="Formalhaut"}
+	sets.weapons.DualLeadenRanged = {main="Naegling",sub="Tauret",range="Formalhaut"}
+	sets.weapons.DualLeadenMelee = {main="Naegling",sub="Atoyac",range="Formalhaut"}
+	sets.weapons.DualLeadenMeleeAcc = {main="Naegling",sub="Blurred Knife +1",range="Formalhaut"}
 	sets.weapons.DualKustawi = {main="Kustawi +1",sub="Kustawi",range="Fomalhaut"}
 	
     -- Engaged sets
