@@ -10,7 +10,7 @@ function user_setup()
 	state.Weapons:options('None','Nehushtan','DualWeapons')
 
 	gear.nuke_jse_back = {name="Nantosuelta's Cape",augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}}
-	gear.idle_jse_back = {name="Nantosuelta's Cape",augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+6','Pet: "Regen"+10','Pet: Damage taken -5%'}}
+	gear.idle_jse_back = {name="Nantosuelta's Cape",augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+6','Pet: "Regen"+10','Phys. dmg. taken-10%',}}
 	
 	gear.obi_cure_back = "Tempered Cape +1"
 	gear.obi_cure_waist = "Witful Belt"
@@ -117,11 +117,11 @@ function init_gear_sets()
 		back="Lifestream Cape",waist="Witful Belt",legs="Geo. Pants +1",feet="Regal Pumps +1"}
 
 	sets.midcast.Geomancy = {
-			main="Solstice",
+			main="Idris",
 			sub="Genmei Shield",
 			range="Dunna",
 			head="Azimuth Hood +1",
-			neck="Incanter's Torque",
+			neck="Bagua Charm +1",
 			ear1="Gifted Earring",
 			ear2="Loquacious Earring",
 			body="Bagua Tunic +1",
@@ -309,7 +309,7 @@ function init_gear_sets()
 	-- Idle sets
 
 	sets.idle = {
-			main="Daybreak",
+			main="Idris",
 			sub="Genmei Shield",
 			ammo="Staunch Tathlum +1",
 			head="Azimuth Hood +1",
@@ -347,21 +347,21 @@ function init_gear_sets()
 
 	-- .Pet sets are for when Luopan is present.
 	sets.idle.Pet = {
-			main="Solstice",
+			main="Idris",
 			sub="Genmei Shield",
-			range="Dunna",
+			ammo="Staunch Tathlum +1",
 			head="Azimuth Hood +1",
-			neck="Bagua Charm +1",
-			ear1="Hypaspist Earring",
-			ear2="Ethereal Earring",
 			body="Shamash Robe",
 			hands="Geo. Mitaines +2",
-			ring1="Defending Ring",
-			ring2="Dark Ring",
-			back=gear.idle_jse_back,
+			legs={ name="Telchine Braconi", augments={'Evasion+18','Pet: "Regen"+3','Pet: Damage taken -4%',}},
+			feet={ name="Bagua Sandals +1", augments={'Enhances "Radial Arcana" effect',}},
+			neck="Loricate Torque +1",
 			waist="Isa Belt",
-			legs={ name="Telchine Braconi", augments={'Pet: "Regen"+2','Pet: Damage taken -4%',}},
-			feet="Bagua Sandals +1",
+			left_ear="Hypaspist Earring",
+			right_ear="Genmei Earring",
+			left_ring="Defending Ring",
+			right_ring="Purity Ring",
+			back={ name="Nantosuelta's Cape", augments={'MP+60','Mag. Acc+20 /Mag. Dmg.+20','Mag. Acc.+6','Pet: "Regen"+10','Phys. dmg. taken-10%',}},
 		}
 
 	sets.idle.PDT.Pet = {main="Terra's Staff",sub="Umbra Strap",range="Dunna",
