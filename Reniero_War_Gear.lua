@@ -50,7 +50,7 @@ function init_gear_sets()
 	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pummeler's Lorica +1"}
+	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pummeler's Lorica +2"}
 	sets.precast.JA['Warcry'] = {}
 	sets.precast.JA['Defender'] = {}
 	sets.precast.JA['Aggressor'] = {}
@@ -156,7 +156,7 @@ function init_gear_sets()
     sets.precast.WS['Upheaval'] = set_combine(sets.precast.WS, {
 						ammo="Knobkierrie",
 						head={ name="Valorous Mask", augments={'Weapon skill damage +5%','STR+10','Accuracy+14','Attack+1',}},
-						body="Flamma Korazin +2",
+						body="Pummeler's Lorica +2",
 						hands={ name="Odyssean Gauntlets", augments={'Attack+25','Weapon skill damage +3%','VIT+9','Accuracy+14',}},
 						legs={ name="Odyssean Cuisses", augments={'Attack+12','Weapon skill damage +3%','VIT+5','Accuracy+10',}},
 						feet="Sulev. Leggings +2",

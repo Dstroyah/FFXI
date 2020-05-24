@@ -103,13 +103,13 @@ function init_gear_sets()
 
 	sets.precast.WS['Savage Blade'] = {
 				ammo="Ginsen",
-				head="Atrophy Chapeau +2",
-				body="Jhakri Robe +1",
+				head="Vitiation Chapeau +2",
+				body="Vitiation Tabard +2",
 				hands="Atrophy Gloves +2",
 				legs="Jhakri Slops +2",
 				feet="Jhakri Pigaches +1",
 				neck="Fotia Gorget",
-				waist="Fotia Belt",
+				waist="Sailfi Belt +1",
 				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
 				right_ear="Ishvara Earring",
 				left_ring = "Shukuyu Ring",

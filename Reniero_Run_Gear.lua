@@ -57,10 +57,21 @@ function init_gear_sets()
 					waist="Kasiri Belt", --3
 		}
 		 
-    sets.Enmity.SIRD = {ammo="Staunch Tathlum +1",
-		head="Meghanada Visor +2",neck="Futhark Torque +1",ear1="Genmei Earring",ear2="Trux Earring",
-		body="Emet Harness",hands=gear.herculean_dt_hands,ring1="Defending Ring",ring2="Moonbeam Ring",
-		back=gear.enmity_jse_back,waist="Rumination Sash",legs="Carmine Cuisses +1",feet="Erilaz Greaves +1"}
+    sets.Enmity.SIRD = {
+					ammo="Staunch Tathlum +1",
+					head={ name="Fu. Bandeau +2", augments={'Enhances "Battuta" effect',}},
+					body="Ashera Harness",
+					hands={ name="Taeon Gloves", augments={'Spell interruption rate down -8%','Phalanx +3',}},
+					legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
+					feet={ name="Taeon Boots", augments={'Spell interruption rate down -8%','Phalanx +3',}},
+					neck={ name="Futhark Torque +1", augments={'Path: A',}},
+					waist="Flume Belt +1",
+					left_ear="Genmei Earring",
+					right_ear="Halasz Earring",
+					left_ring="Defending Ring",
+					right_ring="Moonbeam Ring",
+					back={ name="Ogma's cape", augments={'HP+60','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','Enmity+10','Phys. dmg. taken-10%',}},
+	}
 
     sets.Enmity.DT = {ammo="Staunch Tathlum +1",
         head="Fu. Bandeau +2",neck="Futhark Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
@@ -278,7 +289,7 @@ function init_gear_sets()
 						back="Merciful cape",
 						waist="Olympus sash",
 						legs="Carmine cuisses +1",
-						feet="Turms Leggings +1"
+						feet="Turms Leggings"
 	})
     sets.midcast['Phalanx'] = set_combine(sets.midcast['Enhancing Magic'],{
 						head="Fu. Bandeau +2",
@@ -303,6 +314,8 @@ function init_gear_sets()
 	sets.midcast['Blue Magic'] = set_combine(sets.Enmity, {})
 	sets.midcast['Blue Magic'].SIRD = set_combine(sets.Enmity.SIRD, {})
 	sets.midcast.Cocoon = set_combine(sets.Enmity.SIRD, {})
+	sets.midcast['Geist Wall'] = set_combine(sets.Enmity.SIRD, {})
+	sets.midcast['Sheep Song'] = set_combine(sets.Enmity.SIRD, {})
 
     sets.midcast.Cure = {ammo="Staunch Tathlum +1",
         head="Carmine Mask +1",neck="Phalaina Locket",ear1="Mendi. Earring",ear2="Roundel Earring",
@@ -327,9 +340,9 @@ function init_gear_sets()
     sets.idle = {	ammo="Homiliary",
 					head="Fu. Bandeau +2",
 					body="Runeist's Coat +3",
-					hands="Turms Mittens +1",
+					hands="Turms Mittens",
 					legs="Carmine Cuisses +1",
-					feet="Turms Leggings +1",
+					feet="Turms Leggings",
 					neck="Futhark Torque +1",
 					ear2="Odnowa Earring +1",
 					ear1="Genmei Earring",
@@ -386,11 +399,11 @@ function init_gear_sets()
 	-- Defense Sets
 	
 	sets.defense.PDT = {	ammo="Staunch Tathlum +1",
-							head="Turms Cap +1",
+							head="Turms Cap",
 							body="Ashera Harness",
-							hands="Turms Mittens +1",
+							hands="Turms Mittens",
 							legs="Eri. Leg Guards +1",
-							feet="Turms Leggings +1",
+							feet="Turms Leggings",
 							neck="Futhark Torque +1",
 							waist="Flume Belt +1",
 							ear1="Odnowa Earring +1",
@@ -405,11 +418,11 @@ function init_gear_sets()
         back="Moonlight Cape",waist="Flume Belt +1",legs="Eri. Leg Guards +1",feet="Erilaz Greaves +1"}
 		
 	sets.defense.MDT = {	ammo="Staunch Tathlum +1",
-							head="Turms Cap +1",
+							head="Turms Cap",
 							body="Runeist's Coat +3",
-							hands="Turms Mittens +1",
+							hands="Turms Mittens",
 							legs="Eri. Leg Guards +1",
-							feet="Turms Leggings +1",
+							feet="Turms Leggings",
 							neck="Futhark Torque +1",
 							waist="Flume Belt +1",
 							ear1="Hearty Earring",
@@ -518,11 +531,11 @@ function init_gear_sets()
             back="Moonlight Cape",waist="Olseni Belt",legs="Meg. Chausses +2",feet="Ahosi Leggings"}
 	
     sets.engaged.Tank = {	ammo="Staunch Tathlum +1",
-							head="Turms Cap +1",
+							head="Turms Cap",
 							body="Ashera Harness",
-							hands="Turms Mittens +1",
+							hands="Turms Mittens",
 							legs="Eri. Leg Guards +1",
-							feet="Turms Leggings +1",
+							feet="Turms Leggings",
 							neck="Futhark Torque +1",
 							waist="Flume Belt +1",
 							ear1="Odnowa Earring +1",

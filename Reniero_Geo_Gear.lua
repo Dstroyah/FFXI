@@ -51,7 +51,7 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
 	sets.precast.JA['Life Cycle'] = {body="Geo. Tunic",back=gear.idle_jse_back}
-	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +1"}
+	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +2"}
 	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +1"}
 	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1",hands="Bagua Mitaines +1"}
 	
@@ -354,7 +354,7 @@ function init_gear_sets()
 			body="Shamash Robe",
 			hands="Geo. Mitaines +2",
 			legs={ name="Telchine Braconi", augments={'Evasion+18','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-			feet={ name="Bagua Sandals +1", augments={'Enhances "Radial Arcana" effect',}},
+			feet={ name="Bagua Sandals +2", augments={'Enhances "Radial Arcana" effect',}},
 			neck="Loricate Torque +1",
 			waist="Isa Belt",
 			left_ear="Hypaspist Earring",
@@ -367,7 +367,7 @@ function init_gear_sets()
 	sets.idle.PDT.Pet = {main="Terra's Staff",sub="Umbra Strap",range="Dunna",
 		head="Azimuth Hood +1",neck="Loricate Torque +1",ear1="Handler's Earring",ear2="Handler's Earring +1",
 		body="Jhakri Robe +2",hands="Geo. Mitaines +2",ring1="Defending Ring",ring2="Dark Ring",
-		back=gear.idle_jse_back,waist="Isa Belt",legs="Hagondes Pants +1",feet="Bagua Sandals +1"}
+		back=gear.idle_jse_back,waist="Isa Belt",legs="Hagondes Pants +1",feet="Bagua Sandals +2"}
 
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {})
