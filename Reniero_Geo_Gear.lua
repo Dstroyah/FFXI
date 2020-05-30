@@ -51,7 +51,7 @@ function init_gear_sets()
 	-- Precast sets to enhance JAs
 	sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
 	sets.precast.JA['Life Cycle'] = {body="Geo. Tunic",back=gear.idle_jse_back}
-	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +2"}
+	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +3"}
 	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +1"}
 	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1",hands="Bagua Mitaines +1"}
 	
@@ -80,6 +80,8 @@ function init_gear_sets()
 			legs="Psycloth Lappas", --6%
 			feet="Merlinic Crackows" --5%
 	}
+	
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Ammurapi Shield"})
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {range="Dunna",ammo=empty})
 	
@@ -115,6 +117,8 @@ function init_gear_sets()
 		head="Amalric Coif",neck="Voltsurge Torque",ear1="Enchntr. Earring +1",ear2="Loquacious Earring",
 		body="Zendik Robe",hands="Volte Gloves",ring1="Kishar Ring",ring2="Prolix Ring",
 		back="Lifestream Cape",waist="Witful Belt",legs="Geo. Pants +1",feet="Regal Pumps +1"}
+		
+	sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {main="Daybreak",sub="Ammurapi Shield"})
 
 	sets.midcast.Geomancy = {
 			main="Idris",
@@ -177,12 +181,12 @@ function init_gear_sets()
 			main="Daybreak",
 			sub="Genmei Shield",
 			ammo="Pemphredo Tathlum",
-			head={ name="Amalric Coif", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+			head="Bagua Galero +2",
 			body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 			hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 			legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-			feet="Jhakri Pigaches +1",
-			neck="Stoicheion Medal",
+			feet="Bagua Sandals +3",
+			neck="Sanctity Necklace",
 			waist="Eschan Stone",
 			left_ear="Friomisi Earring",
 			right_ear="Hecate's Earring",
@@ -214,10 +218,10 @@ function init_gear_sets()
 			main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
 			sub="Genmei Shield",
 			ammo="Pemphredo Tathlum",
-			head="Pixie Hairpin +1",
+			head="Bagua Galero +2",
 			body="Shamash Robe",
-			hands="Merlinic Dastanas",
-			legs={ name="Chironic Hose", augments={'Mag. Acc.+27','"Cure" spellcasting time -3%','MND+5','"Mag.Atk.Bns."+9',}},
+			hands="Geomancy Mitaines +2",
+			legs="Jhakri Slops +2",
 			feet="Merlinic Crackows",
 			neck="Erra Pendant",
 			waist="Fucho-no-Obi",
@@ -246,10 +250,22 @@ function init_gear_sets()
 		body="Twilight Cloak",hands="Regal Cuffs",ring1="Stikini Ring",ring2="Stikini Ring",
 		back=gear.nuke_jse_back,waist="Acuity Belt +1",legs="Merlinic Shalwar",feet=gear.merlinic_nuke_feet}
 		
-	sets.midcast['Enfeebling Magic'] = {main="Oranyan",sub="Enki Strap",ammo="Pemphredo Tathlum",
-		head="Befouled Crown",neck="Erra Pendant",ear1="Regal Earring",ear2="Digni. Earring",
-		body=gear.merlinic_nuke_body,hands="Regal Cuffs",ring1="Kishar Ring",ring2="Stikini Ring",
-		back=gear.nuke_jse_back,waist="Luminary Sash",legs="Psycloth Lappas",feet="Uk'uxkaj Boots"}
+	sets.midcast['Enfeebling Magic'] = {
+		main="Grioavolr",
+		sub="Enki Strap",
+		ammo="Pemphredo Tathlum",
+		head="Geomancy Galero +2",
+		neck="Erra Pendant",
+		ear1="Gwati Earring",
+		ear2="Digni. Earring",
+		body="Shamash Robe",
+		hands="Geomancy Mitaines +2",
+		ring1="Kishar Ring",
+		ring2="Stikini Ring",
+		back=gear.nuke_jse_back,
+		waist="Luminary Sash",
+		legs="Psycloth Lappas",
+		feet="Bagua Sandals +3"}
 		
 	sets.midcast['Enfeebling Magic'].Resistant = {main="Oranyan",sub="Enki Strap",ammo="Pemphredo Tathlum",
 		head="Befouled Crown",neck="Erra Pendant",ear1="Regal Earring",ear2="Digni. Earring",
@@ -273,10 +289,23 @@ function init_gear_sets()
 	
 	sets.midcast['Divine Magic'] = set_combine(sets.midcast['Enfeebling Magic'], {ring1="Stikini Ring"})
 		
-	sets.midcast['Enhancing Magic'] = {main=gear.gada_enhancing_club,sub="Ammurapi Shield",ammo="Hasty Pinion +1",
-		head="Telchine Cap",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Gifted Earring",
-		body="Telchine Chas.",hands="Telchine Gloves",ring1="Stikini Ring",ring2="Stikini Ring",
-		back="Perimede Cape",waist="Olympus Sash",legs="Telchine Braconi",feet="Telchine Pigaches"}
+	sets.midcast['Enhancing Magic'] = {
+		main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','VIT+1','Mag. Acc.+2','DMG:+18',}},
+		sub="Genmei Shield",
+		ammo="Hasty Pinion +1",
+		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
+		body="Shamash Robe",
+		hands="Geo. Mitaines +2",
+		legs={ name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
+		feet={ name="Telchine Pigaches", augments={'Pet: "Regen"+2','Pet: Damage taken -4%',}},
+		neck="Incanter's Torque",
+		waist="Olympus Sash",
+		left_ear="Andoaa Earring",
+		right_ear="Mimir Earring",
+		left_ring="Stikini Ring",
+		right_ring="Stikini Ring",
+		back="Perimede Cape",
+	}
 		
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {neck="Nodens Gorget",ear2="Earthcry Earring",waist="Siegel Sash",legs="Shedir Seraweels"})
 	
@@ -354,7 +383,7 @@ function init_gear_sets()
 			body="Shamash Robe",
 			hands="Geo. Mitaines +2",
 			legs={ name="Telchine Braconi", augments={'Evasion+18','Pet: "Regen"+3','Pet: Damage taken -4%',}},
-			feet={ name="Bagua Sandals +2", augments={'Enhances "Radial Arcana" effect',}},
+			feet={ name="Bagua Sandals +3", augments={'Enhances "Radial Arcana" effect',}},
 			neck="Loricate Torque +1",
 			waist="Isa Belt",
 			left_ear="Hypaspist Earring",
@@ -367,7 +396,7 @@ function init_gear_sets()
 	sets.idle.PDT.Pet = {main="Terra's Staff",sub="Umbra Strap",range="Dunna",
 		head="Azimuth Hood +1",neck="Loricate Torque +1",ear1="Handler's Earring",ear2="Handler's Earring +1",
 		body="Jhakri Robe +2",hands="Geo. Mitaines +2",ring1="Defending Ring",ring2="Dark Ring",
-		back=gear.idle_jse_back,waist="Isa Belt",legs="Hagondes Pants +1",feet="Bagua Sandals +2"}
+		back=gear.idle_jse_back,waist="Isa Belt",legs="Hagondes Pants +1",feet="Bagua Sandals +3"}
 
 	-- .Indi sets are for when an Indi-spell is active.
 	sets.idle.Indi = set_combine(sets.idle, {})

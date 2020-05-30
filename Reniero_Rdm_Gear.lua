@@ -72,6 +72,7 @@ function init_gear_sets()
     }											--Total: 71 -- To Do: overkill need to slot DT / HP 
 		
 	sets.precast.FC.Impact = set_combine(sets.precast.FC, {head=empty,body="Twilight Cloak"})
+	sets.precast.FC.Dispelga = set_combine(sets.precast.FC, {main="Daybreak",sub="Genmei Shield"})
        
 	-- Weaponskill sets
 	-- Default set for any weaponskill that isn't any more specifically defined
@@ -179,6 +180,7 @@ function init_gear_sets()
 	sets.element.Wind = {main="Marin Staff +1"}
 	sets.element.Ice = {main="Ngqoqwanb"}
 	sets.element.Earth = {neck="Quanpur Necklace"}
+	sets.midcast.Dispelga = set_combine(sets.midcast['Enfeebling Magic'], {main="Daybreak",sub="Ammurapi Shield"})
 
 	sets.midcast.FastRecast = {main=gear.grioavolr_fc_staff,sub="Clerisy Strap +1",ammo="Hasty Pinion +1",
 		head="Carmine Mask +1",neck="Voltsurge Torque",ear1="Loquac. Earring",ear2="Enchntr. Earring +1",

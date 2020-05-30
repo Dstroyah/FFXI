@@ -148,7 +148,7 @@ function init_gear_sets()
 		hands="Sulev. Gauntlets +2",
 		ring1="Regal Ring",
 		ring2="Niqmaddu Ring",
-		back="Brigantia's Mantle",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 		waist="Fotia Belt",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2"
@@ -174,7 +174,7 @@ function init_gear_sets()
 		right_ear="Sherida Earring",
 		left_ring="Regal Ring",
 		right_ring="Niqmaddu Ring",
-		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+4','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	
 	sets.precast.WS['Sonic Thrust'] = set_combine(sets.precast.WS['Impulse Drive'], {})
@@ -211,11 +211,27 @@ function init_gear_sets()
 		right_ear="Brutal Earring",
 		left_ring="Begrudging Ring",
 		right_ring="Niqmaddu Ring",
-		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+4','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	})
 	sets.precast.WS['Drakesbane'].SomeAcc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Drakesbane'].Acc = set_combine(sets.precast.WS.Acc, {})
 	sets.precast.WS['Drakesbane'].Fodder = set_combine(sets.precast.WS.Fodder, {})
+	
+	sets.precast.WS["Camlann's Torment"] = set_combine(sets.precast.WS, {
+		ammo="Knobkierrie",
+		head={ name="Valorous Mask", augments={'Weapon skill damage +5%','STR+10','Accuracy+14','Attack+1',}},
+		body="Nzingha Cuirass",
+		hands={ name="Valorous Mitts", augments={'Attack+27','Weapon skill damage +3%','STR+6','Accuracy+12',}},
+		legs={ name="Valor. Hose", augments={'Accuracy+17','"Dbl.Atk."+4','MND+11',}},
+		feet="Sulev. Leggings +2",
+		neck="Fotia Gorget",
+		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
+		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
+		right_ear="Sherida Earring",
+		left_ring="Karieyh Ring",
+		right_ring="Niqmaddu Ring",
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	})
 
 
 	
@@ -231,7 +247,7 @@ function init_gear_sets()
 			neck="Loricate Torque +1",
 			ear1="Genmei Earring",
 			ear2="Ethereal Earring",
-			body="Emet Harness",
+			body="Hjarrandi Breastplate",
 			hands="Sulev. Gauntlets +2",
 			ring1="Defending Ring",
 			ring2="Gelatinous Ring +1",
@@ -283,7 +299,7 @@ function init_gear_sets()
 	sets.weapons.Trishula = {main="Kaja Lance",sub="Utu Grip"}
 
 	-- Swap to these on Moonshade using WS if at 3000 TP
-	sets.MaxTP = {ear1="Lugra Earring",ear2="Sherida Earring",}
+	sets.MaxTP = {ear1="Brutal Earring",ear2="Sherida Earring",}
 	sets.AccMaxTP = {ear1="Zennaroi Earring",ear2="Telos Earring"}
 	sets.AccDayMaxTPWSEars = {ear1="Zennaroi Earring",ear2="Telos Earring"}
 	sets.DayMaxTPWSEars = {ear1="Brutal Earring",ear2="Sherida Earring",}
@@ -302,7 +318,7 @@ function init_gear_sets()
 	sets.engaged = {
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
-		body={ name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','Accuracy+1','Attack+13',}},
+		body="Hjarrandi Breastplate",
 		hands="Sulev. Gauntlets +2",
 		legs={ name="Valor. Hose", augments={'Accuracy+19','"Dbl.Atk."+4','VIT+2','Attack+14',}},
 		feet="Flam. Gambieras +2",
