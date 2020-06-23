@@ -234,6 +234,7 @@ function init_gear_sets()
 						ring1="Regal Ring",
 						ring2="Niqmaddu Ring",
 						ear1="Sherida Earring",
+						waist="Sailfi Belt +1",
 						hands={ name="Herculean Gloves", augments={'Accuracy+24 Attack+24','"Triple Atk."+3','DEX+4',}},
 						legs="Meg. Chausses +2",
 						feet={ name="Lustra. Leggings +1", augments={'HP+65','STR+15','DEX+15',}},

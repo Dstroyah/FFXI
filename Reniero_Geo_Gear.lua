@@ -49,11 +49,11 @@ function init_gear_sets()
 	--------------------------------------
 
 	-- Precast sets to enhance JAs
-	sets.precast.JA.Bolster = {body="Bagua Tunic +1"}
+	sets.precast.JA.Bolster = {body="Bagua Tunic +2"}
 	sets.precast.JA['Life Cycle'] = {body="Geo. Tunic",back=gear.idle_jse_back}
 	sets.precast.JA['Radial Arcana'] = {feet="Bagua Sandals +3"}
-	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +1"}
-	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1",hands="Bagua Mitaines +1"}
+	sets.precast.JA['Mending Halation'] = {legs="Bagua Pants +3"}
+	sets.precast.JA['Full Circle'] = {head="Azimuth Hood +1",hands="Bagua Mitaines +2"}
 	
 	-- Indi Duration in slots that would normally have skill here to make entrust more efficient.
 	sets.buff.Entrust = {}
@@ -85,7 +85,7 @@ function init_gear_sets()
 
 	sets.precast.FC.Geomancy = set_combine(sets.precast.FC, {range="Dunna",ammo=empty})
 	
-    sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkaro. Earring",hands="Bagua Mitaines +1"})
+    sets.precast.FC['Elemental Magic'] = set_combine(sets.precast.FC, {ear2="Barkaro. Earring",hands="Bagua Mitaines +2"})
 
 	sets.precast.FC.Cure = set_combine(sets.precast.FC, {main="Serenity",sub="Clerisy Strap +1"})
 		
@@ -128,7 +128,7 @@ function init_gear_sets()
 			neck="Bagua Charm +1",
 			ear1="Gifted Earring",
 			ear2="Loquacious Earring",
-			body="Bagua Tunic +1",
+			body="Bagua Tunic +2",
 			hands="Geo. Mitaines +2",
 			ring1="Stikini Ring",
 			back="Lifestream Cape",
@@ -140,7 +140,7 @@ function init_gear_sets()
 
 
 	--Extra Indi duration as long as you can keep your 900 skill cap.
-	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy, {back=gear.idle_jse_back,legs="Bagua Pants +1",feet="Azimuth Gaiters +1"})
+	sets.midcast.Geomancy.Indi = set_combine(sets.midcast.Geomancy, {back=gear.idle_jse_back,legs="Bagua Pants +3",feet="Azimuth Gaiters +1"})
 		
     sets.midcast.Cure = {
 			main="Daybreak",
@@ -178,13 +178,13 @@ function init_gear_sets()
 	sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast, {main="Oranyan",sub="Clemency Grip"})
 	
     sets.midcast['Elemental Magic'] = {
-			main="Daybreak",
+			main="Maxentius",
 			sub="Genmei Shield",
 			ammo="Pemphredo Tathlum",
-			head="Bagua Galero +2",
+			head="Bagua Galero +3",
 			body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
 			hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-			legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+			legs="Bagua Pants +3",
 			feet="Bagua Sandals +3",
 			neck="Sanctity Necklace",
 			waist="Eschan Stone",
@@ -218,7 +218,7 @@ function init_gear_sets()
 			main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
 			sub="Genmei Shield",
 			ammo="Pemphredo Tathlum",
-			head="Bagua Galero +2",
+			head="Bagua Galero +3",
 			body="Shamash Robe",
 			hands="Geomancy Mitaines +2",
 			legs="Jhakri Slops +2",
@@ -254,8 +254,8 @@ function init_gear_sets()
 		main="Grioavolr",
 		sub="Enki Strap",
 		ammo="Pemphredo Tathlum",
-		head="Geomancy Galero +2",
-		neck="Erra Pendant",
+		head="Bagua Galero +3",
+		neck="Bagua Charm +1",
 		ear1="Gwati Earring",
 		ear2="Digni. Earring",
 		body="Shamash Robe",

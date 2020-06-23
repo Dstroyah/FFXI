@@ -31,12 +31,12 @@ function init_gear_sets()
 	
 	-- Precast Sets
 	-- Precast sets to enhance JAs
-	sets.precast.JA.Angon = {ammo="Angon"} --hands="Ptero. Fin. G. +1"
+	sets.precast.JA.Angon = {ammo="Angon",hands="Ptero. Fin. G."}
 	sets.precast.JA.Jump = {
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
 		body={ name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','Accuracy+1','Attack+13',}},
-		hands="Sulev. Gauntlets +2",
+		hands="Vishap Finger Gauntlets +1",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
 		neck="Anu Torque",
@@ -47,12 +47,12 @@ function init_gear_sets()
 		right_ring="Niqmaddu Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+4','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
-	sets.precast.JA['Ancient Circle'] = {} --legs="Vishap Brais"
+	sets.precast.JA['Ancient Circle'] = {legs="Vishap Brais +1"}
 	sets.precast.JA['High Jump'] = {
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
 		body={ name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','Accuracy+1','Attack+13',}},
-		hands="Sulev. Gauntlets +2",
+		hands="Vishap Finger Gauntlets +1",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
 		neck="Anu Torque",
@@ -67,7 +67,7 @@ function init_gear_sets()
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
 		body={ name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','Accuracy+1','Attack+13',}},
-		hands="Sulev. Gauntlets +2",
+		hands="Vishap Finger Gauntlets +1",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
 		neck="Anu Torque",
@@ -82,7 +82,7 @@ function init_gear_sets()
 		ammo="Ginsen",
 		head="Flam. Zucchetto +2",
 		body={ name="Valorous Mail", augments={'Accuracy+20 Attack+20','"Dbl.Atk."+4','Accuracy+1','Attack+13',}},
-		hands="Sulev. Gauntlets +2",
+		hands="Vishap Finger Gauntlets +1",
 		legs="Sulev. Cuisses +2",
 		feet="Flam. Gambieras +2",
 		neck="Anu Torque",
@@ -94,10 +94,10 @@ function init_gear_sets()
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+4','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
 	sets.precast.JA['Super Jump'] = {}
-	sets.precast.JA['Spirit Link'] = {head="Vishap Armet +1"} --head="Vishap Armet",hands="Lnc. Vmbrc. +2"
-	sets.precast.JA['Call Wyvern'] = {} --body="Ptero. Mail +1"
+	sets.precast.JA['Spirit Link'] = {head="Vishap Armet +1",hands="Peltast's Vambraces"} --head="Vishap Armet"
+	sets.precast.JA['Call Wyvern'] = {} body="Pteroslaver Mail +1"
 	sets.precast.JA['Deep Breathing'] = {} --hands="Ptero. Armet +1"
-	sets.precast.JA['Spirit Surge'] = {} --body="Ptero. Mail +1"
+	sets.precast.JA['Spirit Surge'] = {} body="Pteroslaver Mail +1"
 	sets.precast.JA['Steady Wing'] = {}
 	
 	-- Breath sets
@@ -171,7 +171,7 @@ function init_gear_sets()
 		neck="Fotia Gorget",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Sherida Earring",
+		right_ear="Thrud Earring",
 		left_ring="Regal Ring",
 		right_ring="Niqmaddu Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -208,7 +208,7 @@ function init_gear_sets()
 		neck="Fotia Gorget",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Brutal Earring",
+		right_ear="Thrud Earring",
 		left_ring="Begrudging Ring",
 		right_ring="Niqmaddu Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
@@ -227,7 +227,7 @@ function init_gear_sets()
 		neck="Fotia Gorget",
 		waist={ name="Sailfi Belt +1", augments={'Path: A',}},
 		left_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
-		right_ear="Sherida Earring",
+		right_ear="Thrud Earring",
 		left_ring="Karieyh Ring",
 		right_ring="Niqmaddu Ring",
 		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -266,10 +266,20 @@ function init_gear_sets()
 	sets.idle.Reraise = set_combine(sets.idle, {head="Twilight Helm",body="Twilight Mail"})
 	
 	-- Defense sets
-	sets.defense.PDT = {ammo="Staunch Tathlum +1",
-		head="Loess Barbuta +1",neck="Loricate Torque +1",ear1="Genmei Earring",ear2="Ethereal Earring",
-		body="Tartarus Platemail",hands="Sulev. Gauntlets +2",ring1="Moonbeam Ring",ring2="Moonbeam Ring",
-		back="Shadow Mantle",waist="Flume Belt +1",legs="Arke Cosciales",feet="Amm Greaves"}
+	sets.defense.PDT = {
+		ammo="Staunch Tathlum +1",
+		head="Loess Barbuta +1",
+		neck="Loricate Torque +1",
+		ear1="Genmei Earring",
+		ear2="Ethereal Earring",
+		body="Hjarrandi Breastplate",
+		hands="Sulev. Gauntlets +2",
+		ring1="Moonbeam Ring",
+		ring2="Moonbeam Ring",
+		back="Shadow Mantle",
+		waist="Flume Belt +1",
+		legs="Arke Cosciales",
+		feet="Amm Greaves"}
 		
 	sets.defense.PDTReraise = set_combine(sets.defense.PDT, {head="Twilight Helm",body="Twilight Mail"})
 
@@ -328,7 +338,7 @@ function init_gear_sets()
 		right_ear="Sherida Earring",
 		left_ring="Petrov Ring",
 		right_ring="Niqmaddu Ring",
-		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+4','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
+		back={ name="Brigantia's Mantle", augments={'STR+20','Accuracy+20 Attack+20','Accuracy+5','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 	}
     sets.engaged.SomeAcc = {ammo="Ginsen",
 		head="Flam. Zucchetto +2",neck="Shulmanu Collar",ear1="Brutal Earring",ear2="Sherida Earring",
