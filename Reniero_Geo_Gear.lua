@@ -472,7 +472,23 @@ function init_gear_sets()
 	sets.RecoverMP = {body="Seidr Cotehardie"}
 	
 	-- Gear for Magic Burst mode.
-    sets.MagicBurst = {head="Ea Hat",neck="Mizu. Kubikazari",body="Ea Houppelande",ring1="Mujin Band",legs="Ea Slops",feet="Jhakri Pigaches +2"}
+    sets.MagicBurst = {
+				main="Maxentius",
+				sub="Genmei Shield",
+				ammo="Pemphredo Tathlum",
+				head="Ea Hat",
+				neck="Mizu. Kubikazari",
+				body="Ea Houppelande",
+				hands={ name="Amalric Gages", augments={'INT+10','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				waist="Eschan Stone",
+				left_ear="Friomisi Earring",
+				right_ear="Hecate's Earring",
+				left_ring="Mujin Band",
+				right_ring="Freke Ring",
+				legs="Ea Slops",
+				feet="Bagua Sandals +3"
+				back=gear.nuke_jse_back,
+	}
 	sets.RecoverBurst = {head="Ea Hat",neck="Mizu. Kubikazari",body="Seidr Cotehardie",ring1="Mujin Band",legs="Ea Slops",feet="Jhakri Pigaches +2"}
 
 	-- Weapons sets
