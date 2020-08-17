@@ -34,10 +34,10 @@ function init_gear_sets()
     sets.Enmity = {
 			ammo="Aqreqaq Bomblet",
 			head="Halitus Helm",
-			body={ name="Souveran Cuirass", augments={'HP+80','Enmity+7','Potency of "Cure" effect received +10%',}},
-			hands={ name="Eschite Gauntlets", augments={'HP+80','Enmity+7','Phys. dmg. taken -4',}},
-			legs={ name="Odyssean Cuisses", augments={'Attack+12','Weapon skill damage +3%','VIT+5','Accuracy+10',}},
-			feet={ name="Eschite Greaves", augments={'HP+80','Enmity+7','Phys. dmg. taken -4',}},
+			body="Souv. Cuirass +1",
+			hands="Souv. Handsch. +1",
+			legs="Souv. Diechlings +1",
+			feet="Souveran Schuhs +1",
 			neck="Unmoving Collar",
 			waist="Goading Belt",
 			left_ear="Friomisi Earring",
@@ -50,13 +50,13 @@ function init_gear_sets()
 	sets.passive.Twilight = {head="Twilight Helm",body="Twilight Mail"}
 	
 	-- Precast sets to enhance JAs
-	sets.precast.JA['Berserk'] = {back="Cichol's Mantle",body="Pummeler's Lorica +2"}
-	sets.precast.JA['Warcry'] = {}
+	sets.precast.JA['Berserk'] = {back="Cichol's Mantle", feet="Agoge Calligae", body="Pummeler's Lorica +2"}
+	sets.precast.JA['Warcry'] = {head="Agoge Mask"}
 	sets.precast.JA['Defender'] = {}
-	sets.precast.JA['Aggressor'] = {}
-	sets.precast.JA['Mighty Strikes'] = {}
-	sets.precast.JA["Warrior's Charge"] = {}
-	sets.precast.JA['Tomahawk'] = {ammo="Thr. Tomahawk"}
+	sets.precast.JA['Aggressor'] = {body="Agoge Lorica"}
+	sets.precast.JA['Mighty Strikes'] = {hands="Agoge Mufflers"}
+	sets.precast.JA["Warrior's Charge"] = {legs="Agoge Cuisses"}
+	sets.precast.JA['Tomahawk'] = {feet="Agoge Calligae", ammo="Thr. Tomahawk"}
 	sets.precast.JA['Retaliation'] = {}
 	sets.precast.JA['Restraint'] = {}
 	sets.precast.JA['Blood Rage'] = {}
@@ -105,7 +105,7 @@ function init_gear_sets()
 						feet="Flam. Gambieras +2",
 						neck="Fotia Gorget",
 						waist="Fotia Belt",
-						left_ear="Cessance Earring",
+						left_ear="Thrud Earring",
 						right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 						right_ring="Niqmaddu Ring",
 						left_ring="Karieyh Ring",
@@ -162,7 +162,7 @@ function init_gear_sets()
 						feet="Sulev. Leggings +2",
 						neck="Fotia Gorget",
 						waist="Ioskeha Belt",
-						left_ear="Ishvara Earring",
+						left_ear="Thrud Earring",
 						right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 						left_ring="Regal Ring",
 						right_ring="Niqmaddu Ring",
@@ -181,7 +181,7 @@ function init_gear_sets()
 						legs="Argosy Breeches +1",
 						feet="Flam. Gambieras +2",
 						neck="Fotia Gorget",
-						waist="Fotia Belt",
+						waist="Sailfi Belt +1",
 						left_ear="Brutal Earring",
 						right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 						right_ring="Niqmaddu Ring",
@@ -270,7 +270,7 @@ function init_gear_sets()
 			neck="Loricate Torque +1",
 			ear1="Genmei Earring",
 			ear2="Eabani Earring",
-			body="Souveran Cuirass",
+			body="Hjarrandi Breastplate",
 			hands="Sulev. Gauntlets +2",
 			ring1="Karieyh Ring",
 			ring2="Defending Ring",

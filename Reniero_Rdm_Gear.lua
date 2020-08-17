@@ -92,24 +92,34 @@ function init_gear_sets()
 				feet="Carmine Greaves +1"}
 	
 	-- Specific weaponskill sets.  Uses the base set if an appropriate WSMod version isn't found.
+	
+	-- Sword WS Sets
+	
 	sets.precast.WS['Requiescat'] = set_combine(sets.precast.WS, {})
 	
-	sets.precast.WS['Chant Du Cygne'] = set_combine(sets.precast.WS, {
+	sets.precast.WS['Chant Du Cygne'] = {
+				ammo="Yetshila",
+				head="Aya. Zucchetto +2",
 				neck="Fotia Gorget",
-				ear1="Moonshade Earring",
+				ear1="Mache Earring",
 				ear2="Sherida Earring",
+				body="Ayanmo Corazza +2",
 				ring1="Begrudging Ring",
+				ring1="Ilabrat Ring",
 				waist="Fotia Belt",
-				feet="Thereoid Greaves"})
+				legs="Carmine Cuisses +1",
+				feet="Thereoid Greaves",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}}
+	}
 
 	sets.precast.WS['Savage Blade'] = {
 				ammo="Ginsen",
 				head="Vitiation Chapeau +2",
 				body="Vitiation Tabard +2",
-				hands="Atrophy Gloves +2",
+				hands="Atrophy Gloves +3",
 				legs="Jhakri Slops +2",
 				feet="Jhakri Pigaches +1",
-				neck="Fotia Gorget",
+				neck="Dls. Torque +1",
 				waist="Sailfi Belt +1",
 				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
 				right_ear="Ishvara Earring",
@@ -118,17 +128,17 @@ function init_gear_sets()
 				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 	
-	sets.precast.WS['Black Halo'] = {
+	sets.precast.WS['Death Blossom'] = {
 				ammo="Ginsen",
 				head="Vitiation Chapeau +2",
 				body="Vitiation Tabard +2",
-				hands="Atrophy Gloves +2",
+				hands="Atrophy Gloves +3",
 				legs="Jhakri Slops +2",
-				feet="Ayanmo Gambieras +2",
+				feet="Jhakri Pigaches +1",
 				neck="Dls. Torque +1",
-				waist="Fotia Belt",
+				waist="Sailfi Belt +1",
 				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
-				right_ear="Sherida Earring",
+				right_ear="Ishvara Earring",
 				left_ring = "Shukuyu Ring",
 				right_ring="Karieyh Ring",
 				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
@@ -137,17 +147,68 @@ function init_gear_sets()
 	sets.precast.WS['Sanguine Blade'] = {
 				ammo="Pemphredo Tathlum",
 				head="Pixie Hairpin +1",
-				neck="Baetyl Pendant",
-				ear1="Friomisi Earring",
-				ear2="Crematio Earring",
-				body=gear.merlinic_nuke_body,
-				hands="Amalric Gages +1",
-				ring1="Shiva Ring +1",
-				ring2="Archon Ring",
-				back="Sucellos's Cape",
-				waist="Refoccilation Stone",
-				legs="Merlinic Shalwar",
-				feet=gear.merlinic_nuke_feet
+				body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				hands="Jhakri Cuffs +2",
+				legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+				neck="Sanctity Necklace",
+				waist="Eschan Stone",
+				left_ear="Friomisi Earring",
+				right_ear="Hecate's Earring",
+				left_ring="Shiva Ring +1",
+				right_ring="Freke Ring",
+				back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
+	
+	-- Club WS Sets
+	
+	sets.precast.WS['Black Halo'] = {
+				ammo="Ginsen",
+				head="Vitiation Chapeau +2",
+				body="Vitiation Tabard +2",
+				hands="Atrophy Gloves +3",
+				legs="Jhakri Slops +2",
+				feet="Ayanmo Gambieras +2",
+				neck="Dls. Torque +1",
+				waist="Sailfi Belt +1",
+				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
+				right_ear="Sherida Earring",
+				left_ring = "Shukuyu Ring",
+				right_ring="Karieyh Ring",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
+	}
+	
+	-- Dagger WS Sets
+	
+	sets.precast.WS['Aeolian Edge'] = {
+				ammo="Pemphredo Tathlum",
+				head="Jhakri Coronal +2",
+				body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				hands="Jhakri Cuffs +2",
+				legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+				neck="Sanctity Necklace",
+				waist="Eschan Stone",
+				left_ear="Friomisi Earring",
+				right_ear="Hecate's Earring",
+				left_ring="Shiva Ring +1",
+				right_ring="Freke Ring",
+				back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
+	
+	sets.precast.WS['Evisceration'] = {
+				ammo="Yetshila",
+				head="Aya. Zucchetto +2",
+				neck="Fotia Gorget",
+				ear1="Mache Earring",
+				ear2="Sherida Earring",
+				body="Ayanmo Corazza +2",
+				ring1="Begrudging Ring",
+				ring1="Ilabrat Ring",
+				waist="Fotia Belt",
+				legs="Carmine Cuisses +1",
+				feet="Thereoid Greaves",
+				back={ name="Sucellos's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Weapon skill damage +10%',}},
 	}
 
 	-- Midcast Sets
@@ -228,11 +289,11 @@ function init_gear_sets()
 
 	sets.midcast['Enhancing Magic'] = {
 			main		=	"Pukulatmuj +1",
-			--sub			=	"Ammurapi Shield",
-			ammo		=	"Homiliary",
+			sub			=	"Ammurapi Shield",
+			ammo		=	"Staunch Tathlum +1",
 			head		=	{name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
 			body		=	"Vitiation Tabard +2",
-			hands		=	"Atrophy Gloves +2",
+			hands		=	"Atrophy Gloves +3",
 			legs		=	{name="Telchine Braconi", augments={'Enh. Mag. eff. dur. +10',}},
 			feet		=	"Lethargy Houseaux +1",
 			neck		=	"Dls. Torque +1",
@@ -313,7 +374,7 @@ function init_gear_sets()
 	sets.midcast.IntEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {
 				head="Amalric Coif",waist="Acuity Belt +1"})
 	sets.midcast.IntEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {
-				head="Amalric Coif",hands="Jhakri Cuffs +1",waist="Acuity Belt +1"})
+				head="Amalric Coif",hands="Jhakri Cuffs +2",waist="Acuity Belt +1"})
 
 	sets.midcast.MndEnfeebles = set_combine(sets.midcast['Enfeebling Magic'], {})
 	sets.midcast.MndEnfeebles.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})
@@ -342,7 +403,7 @@ function init_gear_sets()
 	
     sets.midcast['Elemental Magic'] = {
 						main="Maxentius",
-						sub="Beatific Shield +1",
+						sub="Ammurapi Shield",
 						ammo="Pemphredo Tathlum",
 						head="Jhakri Coronal +2",
 						body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
@@ -389,7 +450,7 @@ function init_gear_sets()
 
     sets.midcast.Drain = {
 						main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
-						sub="Genmei Shield",
+						sub="Ammurapi Shield",
 						ammo="Pemphredo Tathlum",
 						head="Pixie Hairpin +1",
 						body="Shamash Robe",
@@ -422,7 +483,7 @@ function init_gear_sets()
 	sets.buff.Saboteur = {hands="Lethargy Gantherots +1"}
 	
 	sets.HPDown = {head="Pixie Hairpin +1",ear1="Mendicant's Earring",ear2="Evans Earring",
-		body="Jhakri Robe +2",hands="Jhakri Cuffs +1",ring1="Mephitas's Ring +1",ring2="Mephitas's Ring",
+		body="Jhakri Robe +2",hands="Jhakri Cuffs +2",ring1="Mephitas's Ring +1",ring2="Mephitas's Ring",
 		back="Swith Cape +1",legs="Shedir Seraweels",feet="Jhakri Pigaches +2"}
 	
 	sets.buff.Doom = set_combine(sets.buff.Doom, {})
@@ -538,7 +599,7 @@ function init_gear_sets()
 			ammo="Ginsen",
 			head="Aya. Zucchetto +2",
 			body="Malignance Tabard",
-			hands="Atrophy Gloves +2",
+			hands="Atrophy Gloves +3",
 			legs="Carmine Cuisses +1",
 			feet="Ayanmo Gambieras +2",
 			neck="Anu Torque",

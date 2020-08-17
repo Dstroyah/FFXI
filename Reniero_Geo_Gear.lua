@@ -65,7 +65,7 @@ function init_gear_sets()
 
 	sets.precast.FC = {
 			main="Solstice", --5%
-			sub="Genmei Shield",
+			sub="Ammurapi Shield",
 			range="Dunna",
 			head="Amalric Coif", --10%
 			neck="Orunmila's Torque", --5%
@@ -122,7 +122,7 @@ function init_gear_sets()
 
 	sets.midcast.Geomancy = {
 			main="Idris",
-			sub="Genmei Shield",
+			sub="Ammurapi Shield",
 			range="Dunna",
 			head="Azimuth Hood +1",
 			neck="Bagua Charm +1",
@@ -179,7 +179,7 @@ function init_gear_sets()
 	
     sets.midcast['Elemental Magic'] = {
 			main="Maxentius",
-			sub="Genmei Shield",
+			sub="Ammurapi Shield",
 			ammo="Pemphredo Tathlum",
 			head="Bagua Galero +3",
 			body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
@@ -216,7 +216,7 @@ function init_gear_sets()
 		
     sets.midcast.Drain = {
 			main={ name="Rubicundity", augments={'Mag. Acc.+9','"Mag.Atk.Bns."+8','Dark magic skill +9','"Conserve MP"+5',}},
-			sub="Genmei Shield",
+			sub="Ammurapi Shield",
 			ammo="Pemphredo Tathlum",
 			head="Bagua Galero +3",
 			body="Shamash Robe",
@@ -291,7 +291,7 @@ function init_gear_sets()
 		
 	sets.midcast['Enhancing Magic'] = {
 		main={ name="Gada", augments={'Enh. Mag. eff. dur. +5','VIT+1','Mag. Acc.+2','DMG:+18',}},
-		sub="Genmei Shield",
+		sub="Ammurapi Shield",
 		ammo="Hasty Pinion +1",
 		head={ name="Telchine Cap", augments={'Enh. Mag. eff. dur. +8',}},
 		body="Shamash Robe",
@@ -474,7 +474,7 @@ function init_gear_sets()
 	-- Gear for Magic Burst mode.
     sets.MagicBurst = {
 				main="Maxentius",
-				sub="Genmei Shield",
+				sub="Ammurapi Shield",
 				ammo="Pemphredo Tathlum",
 				head="Ea Hat",
 				neck="Mizu. Kubikazari",
@@ -486,7 +486,7 @@ function init_gear_sets()
 				left_ring="Mujin Band",
 				right_ring="Freke Ring",
 				legs="Ea Slops",
-				feet="Bagua Sandals +3"
+				feet="Bagua Sandals +3",
 				back=gear.nuke_jse_back,
 	}
 	sets.RecoverBurst = {head="Ea Hat",neck="Mizu. Kubikazari",body="Seidr Cotehardie",ring1="Mujin Band",legs="Ea Slops",feet="Jhakri Pigaches +2"}
