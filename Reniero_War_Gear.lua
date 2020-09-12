@@ -145,7 +145,7 @@ function init_gear_sets()
 						legs="Flamma Dirs +2",
 						feet="Flam. Gambieras +2",
 						neck="Lissome Necklace",
-						waist="Ioskeha Belt",
+						waist="Sailfi Belt +1",
 						left_ear="Cessance Earring",
 						right_ear={ name="Moonshade Earring", augments={'Accuracy+4','TP Bonus +250',}},
 						right_ring="Niqmaddu Ring",
@@ -286,15 +286,15 @@ function init_gear_sets()
 	-- Defense sets
 	sets.defense.PDT = {
 			ammo="Staunch Tathlum +1",
-			head="Genmei Barbuta",
-			neck="Loricate Torque +1",
+			head="Flam. Zucchetto +2",
+			neck="Lissome Necklace",
 			left_ear="Telos Earring",
 			right_ear="Cessance Earring",
-			body="Tartarus Platemail",
+			body="Hjarrandi Breastplate",
 			hands="Sulev. Gauntlets +2",
 			ring1="Moonbeam Ring",
 			ring2="Moonbeam Ring",
-			back="Shadow Mantle",
+			back={ name="Cichol's Mantle", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},
 			waist="Flume Belt",
 			legs="Pumm. Cuisses +2",
 			feet="Pumm. Calligae +2",
@@ -512,7 +512,7 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.Chango = {main="Hepatizon Axe +1",sub="Utu Grip"}
+	sets.weapons.Chango = {main="Chango",sub="Utu Grip"}
 	sets.weapons.Greatsword = {main="Montante +1",sub="Utu Grip"}
 	sets.weapons.Polearm = {main="Kaja Lance",sub="Utu Grip"}
 	sets.weapons.DWNaegling = {main="Naegling",sub="Barbarity"}

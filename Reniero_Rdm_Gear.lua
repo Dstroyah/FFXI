@@ -118,7 +118,7 @@ function init_gear_sets()
 				body="Vitiation Tabard +2",
 				hands="Atrophy Gloves +3",
 				legs="Jhakri Slops +2",
-				feet="Jhakri Pigaches +1",
+				feet={ name="Chironic Slippers", augments={'"Mag.Atk.Bns."+12','DEX+1','Weapon skill damage +8%','Accuracy+15 Attack+15','Mag. Acc.+13 "Mag.Atk.Bns."+13',}},
 				neck="Dls. Torque +1",
 				waist="Sailfi Belt +1",
 				left_ear={ name="Moonshade Earring", augments={'Attack+4','TP Bonus +250',}},
@@ -317,7 +317,7 @@ function init_gear_sets()
 	--Don't set combine a full set with these spells, they should layer on Enhancing Set > Composure (If Applicable) > Spell
 	sets.midcast.Refresh = {
 			head={ name="Amalric Coif", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
-			body="Atrophy Tabard +2",
+			body="Atrophy Tabard +3",
 			legs="Lethargy Fuseau +1",
 			feet="Lethargy Houseaux +1",
 	}
@@ -337,7 +337,7 @@ function init_gear_sets()
 				head		=	"Vitiation Chapeau +2",
 				body		=	"Lethargy Sayon +1",
 				hands		=	"Kaykaus Cuffs +1",
-				legs		=	"Chironic Hose",
+				legs		=	{ name="Chironic Hose", augments={'Mag. Acc.+30','MND+12','"Mag.Atk.Bns."+3',}},
 				feet		=	"Vitiation Boots +3",
 				neck		=	"Duelist's Torque +1",
 				waist		=	"Luminary Sash",
@@ -356,13 +356,13 @@ function init_gear_sets()
 				neck="Dls. Torque +1",
 				ear1="Regal Earring",
 				ear2="Digni. Earring",
-				body="Atrophy Tabard +2",
+				body="Atrophy Tabard +3",
 				hands="Kaykaus Cuffs +1",
 				ring1="Stikini Ring",
 				ring2="Stikini Ring",
 				back={ name="Sucellos's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10',}},
 				waist="Luminary Sash",
-				legs="Chironic Hose",
+				legs={ name="Chironic Hose", augments={'Mag. Acc.+30','MND+12','"Mag.Atk.Bns."+3',}},
 				feet="Vitiation Boots +3"
 	}
 		
@@ -384,7 +384,7 @@ function init_gear_sets()
 	sets.midcast['Frazzle III'] = set_combine(sets.midcast.MndEnfeebles, {neck="Incanter's Torque",hands="Lethargy Gantherots +1",body="Lethargy Sayon +1"})
 	sets.midcast['Frazzle III'].Resistant = set_combine(sets.midcast.MndEnfeebles.Resistant, {hands=gear.chironic_enfeeble_hands})
 	
-	sets.midcast.Silence = set_combine(sets.midcast['Enfeebling Magic'], {body="Atrophy Tabard +2"})
+	sets.midcast.Silence = set_combine(sets.midcast['Enfeebling Magic'], {body="Atrophy Tabard +3"})
 	sets.midcast.Silence.Resistant = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})	
 	
 	sets.midcast['Divine Magic'] = set_combine(sets.midcast['Enfeebling Magic'].Resistant, {})
@@ -413,7 +413,7 @@ function init_gear_sets()
 						neck="Stoicheion Medal",
 						waist="Eschan Stone",
 						left_ear="Friomisi Earring",
-						right_ear="Hecate's Earring",
+						right_ear="Malignance Earring",
 						left_ring="Freke Ring",
 						right_ring="Shiva Ring +1",
 						back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
@@ -445,7 +445,7 @@ function init_gear_sets()
 
 	sets.midcast['Dark Magic'] = {main="Rubicundity",sub="Ammurapi Shield",ammo="Regal Gem",
 		head={ name="Amalric Coif", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},neck="Incanter's Torque",ear1="Regal Earring",ear2="Digni. Earring",
-		body="Atrophy Tabard +2",hands="Lethargy Gantherots +1",ring1="Stikini Ring",ring2="Stikini Ring",
+		body="Atrophy Tabard +3",hands="Lethargy Gantherots +1",ring1="Stikini Ring",ring2="Stikini Ring",
 		back="Sucellos's Cape",waist="Luminary Sash",legs="Psycloth Lappas",feet=gear.merlinic_nuke_feet}
 
     sets.midcast.Drain = {
@@ -581,34 +581,34 @@ function init_gear_sets()
 
 	sets.engaged = {
 			ammo		=	"Ginsen",
-			head		=	{ name="Taeon Chapeau", augments={'Accuracy+14 Attack+14','"Triple Atk."+2',}},
+			head		=	{name="Taeon Chapeau", augments={'Accuracy+14 Attack+14','"Triple Atk."+2',}},
 			body		=	"Malignance Tabard",
 			hands		=	"Carmine Fin. Ga.",
 			left_ring	=	"Hetairoi Ring",     
-			legs		=	{ name="Taeon Tights", augments={'Accuracy+15','"Triple Atk."+1',}},
-			feet		=	{ name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
+			legs		=	{name="Taeon Tights", augments={'Accuracy+15','"Triple Atk."+1',}},
+			feet		=	{name="Carmine Greaves", augments={'Accuracy+10','DEX+10','MND+15',}},
 			neck		=	"Anu Torque",
 			waist		=	"Windbuffet Belt",
 			left_ear	=	"Telos Earring",
 			right_ear	=	"Sherida Earring",
 			right_ring	=	"Chirich Ring",
-			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+			back		=	{name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 
 	sets.engaged.DW = {
-			ammo="Ginsen",
-			head="Aya. Zucchetto +2",
-			body="Malignance Tabard",
-			hands="Atrophy Gloves +3",
-			legs="Carmine Cuisses +1",
-			feet="Ayanmo Gambieras +2",
-			neck="Anu Torque",
-			waist="Reiki Yotai",
-			left_ear="Telos Earring",
-			right_ear="Sherida Earring",
-			left_ring="Hetairoi Ring",
-			right_ring="Chirich Ring",
-			back={ name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+			ammo		=	"Ginsen",
+			head		=	"Aya. Zucchetto +2",
+			body		=	"Malignance Tabard",
+			hands		=	"Atrophy Gloves +3",
+			legs		=	"Carmine Cuisses +1",
+			feet		=	"Ayanmo Gambieras +2",
+			neck		=	"Anu Torque",
+			waist		=	"Reiki Yotai",
+			left_ear	=	"Telos Earring",
+			right_ear	=	"Sherida Earring",
+			left_ring	=	"Hetairoi Ring",
+			right_ring	=	"Chirich Ring",
+			back		=	{name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}
 		
 	sets.engaged.PhysicalDef = {ammo="Ginsen",

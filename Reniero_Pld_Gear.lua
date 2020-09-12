@@ -430,7 +430,7 @@ function init_gear_sets()
 		ear2="Thureous Earring",
 		body="Souv. Cuirass +1",
 		hands="Souv. Handsch. +1",
-		ring1="Defending Ring",
+		ring1="Moonbeam Ring",
 		ring2="Moonbeam Ring",
 		back="Rudianos's Mantle",
 		waist="Flume Belt +1",
