@@ -37,7 +37,7 @@ function user_setup()
 	
 	select_default_macro_book()
 	
-	send_command('wait 6;input /lockstyleset 3')
+	send_command('wait 6;input /lockstyleset 10')
 end
 
 function init_gear_sets()
@@ -48,7 +48,7 @@ function init_gear_sets()
 					hands="Kurys Gloves", --9
 					legs="Eri. Leg Guards +1", --7
 					feet="Ahosi Leggings",--7
-					neck="Unmoving Collar", --10
+					neck="Moonbeam Necklace", --10
 					ear1="Odnowa Earring +1",
 					ear2="Eabani Earring",
 					ring1="Moonbeam Ring",
@@ -64,7 +64,7 @@ function init_gear_sets()
 					hands={ name="Taeon Gloves", augments={'Spell interruption rate down -8%','Phalanx +3',}},
 					legs={ name="Carmine Cuisses +1", augments={'Accuracy+12','DEX+12','MND+20',}},
 					feet={ name="Taeon Boots", augments={'Spell interruption rate down -8%','Phalanx +3',}},
-					neck={ name="Futhark Torque +1", augments={'Path: A',}},
+					neck="Moonbeam Necklace",
 					waist="Flume Belt +1",
 					left_ear="Genmei Earring",
 					right_ear="Halasz Earring",

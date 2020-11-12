@@ -1,13 +1,13 @@
 function user_setup()
 	-- Options: Override default values
-    state.OffenseMode:options('Normal')
+    state.OffenseMode:options('Normal', 'EnSpell')
     state.HybridMode:options('Normal', 'PhysicalDef', 'MagicalDef')
 	state.CastingMode:options('Normal', 'Resistant', 'Fodder', 'Proc')
     state.IdleMode:options('Normal', 'PDT', 'MDT', 'TPEat','DTHippo')
     state.PhysicalDefenseMode:options('PDT', 'NukeLock')
 	state.MagicalDefenseMode:options('MDT')
 	state.ResistDefenseMode:options('MEVA')
-	state.Weapons:options('None','Naegling','Daybreak','Maxentius','DualWeapons','DualClubs','DualAlmace')
+	state.Weapons:options('None','Vitiation','Naegling','Daybreak','Maxentius','DualEnspell','DualWeapons','DualClubs','DualAlmace')
 	
 	gear.obi_cure_back = "Tempered Cape +1"
 	gear.obi_cure_waist = "Witful Belt"
@@ -145,6 +145,22 @@ function init_gear_sets()
 	}
 		
 	sets.precast.WS['Sanguine Blade'] = {
+				ammo="Pemphredo Tathlum",
+				head="Pixie Hairpin +1",
+				body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				hands="Jhakri Cuffs +2",
+				legs={ name="Amalric Slops", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
+				feet={ name="Vitiation Boots +3", augments={'Immunobreak Chance',}},
+				neck="Sanctity Necklace",
+				waist="Eschan Stone",
+				left_ear="Friomisi Earring",
+				right_ear="Hecate's Earring",
+				left_ring="Shiva Ring +1",
+				right_ring="Freke Ring",
+				back={ name="Sucellos's Cape", augments={'INT+20','Mag. Acc+20 /Mag. Dmg.+20','INT+10','"Mag.Atk.Bns."+10',}},
+	}
+	
+	sets.precast.WS['Seraph Blade'] = {
 				ammo="Pemphredo Tathlum",
 				head="Pixie Hairpin +1",
 				body={ name="Amalric Doublet", augments={'MP+60','Mag. Acc.+15','"Mag.Atk.Bns."+15',}},
@@ -559,9 +575,11 @@ function init_gear_sets()
 	sets.NightIdle = {}
 	
 	-- Weapons sets
-	sets.weapons.Naegling = {main="Naegling",sub="Genmei Shield"}
-	sets.weapons.Daybreak = {main="Daybreak",sub="Genmei Shield"}
-	sets.weapons.Maxentius= {main="Maxentius",sub="Genmei Shield"}
+	sets.weapons.Vitiation = {main="Vitiation Sword",sub="Beatific Shield +1"}
+	sets.weapons.Naegling = {main="Naegling",sub="Beatific Shield +1"}
+	sets.weapons.Daybreak = {main="Daybreak",sub="Beatific Shield +1"}
+	sets.weapons.Maxentius= {main="Maxentius",sub="Beatific Shield +1"}
+	sets.weapons.DualEnspell = {main="Vitiation Sword",sub="Daybreak"}
 	sets.weapons.DualWeapons = {main="Naegling",sub="Tauret"}
 	sets.weapons.DualClubs = {main="Maxentius",sub="Tauret"}
 	sets.weapons.DualAlmace = {main="Almace",sub="Sequence"}
@@ -607,6 +625,22 @@ function init_gear_sets()
 			left_ear	=	"Telos Earring",
 			right_ear	=	"Sherida Earring",
 			left_ring	=	"Hetairoi Ring",
+			right_ring	=	"Chirich Ring",
+			back		=	{name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
+	}
+	
+	sets.engaged.EnSpell = {
+			ammo		=	"Hasty Pinion +1",
+			head		=	"Aya. Zucchetto +2",
+			body		=	"Malignance Tabard",
+			hands		=	"Ayanmo Manopolas +2",
+			legs		=	"Carmine Cuisses +1",
+			feet		=	"Ayanmo Gambieras +2",
+			neck		=	"Sanctity Necklace",
+			waist		=	"Reiki Yotai",
+			left_ear	=	"Telos Earring",
+			right_ear	=	"Suppanomimi",
+			left_ring	=	"Chirich Ring",
 			right_ring	=	"Chirich Ring",
 			back		=	{name="Sucellos's Cape", augments={'DEX+20','Accuracy+20 Attack+20','Accuracy+10','"Dual Wield"+10','Phys. dmg. taken-10%',}},
 	}

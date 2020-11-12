@@ -30,7 +30,7 @@ function user_setup()
 
     select_default_macro_book()
 	
-	send_command('wait 6;input /lockstyleset 2')
+	send_command('wait 6;input /lockstyleset 10')
 end
 
 -- Define sets and vars used by this job file.
@@ -57,7 +57,7 @@ function init_gear_sets()
 	sets.Ambush = {} --body="Plunderer's Vest +1"
 	
 	-- Weapons sets
-	sets.weapons.Aeneas = {main="Skinflayer",sub="Ipetam"}
+	sets.weapons.Aeneas = {main="Tauret",sub="Skinflayer"}
 	sets.weapons.LowBuff = {main="Aeneas",sub="Blurred Knife +1"}
 	sets.weapons.MagicWeapons = {main="Malevolence",sub="Malevolence"}
 	sets.weapons.Throwing = {main="Aeneas",sub="Taming Sari",range="Comet Tail",ammo=empty}
@@ -330,7 +330,7 @@ function init_gear_sets()
 			waist="Windbuffet Belt",
 			left_ear="Suppanomimi",
 			right_ear="Sherida Earring",
-			left_ring="Epona's Ring",
+			left_ring="Gere Ring",
 			right_ring="Hetairoi Ring",
 			back="Canny Cape",
 	}

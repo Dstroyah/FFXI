@@ -10,12 +10,12 @@ function user_setup()
     state.MagicalDefenseMode:options('BDT','MDT_HP','AegisMDT','AegisNoShellMDT','OchainMDT','OchainNoShellMDT','MDT_Reraise')
 	state.ResistDefenseMode:options('MEVA','MEVA_HP','Death','Charm')
 	state.IdleMode:options('Normal','Tank','KiteTank','PDT','MDT','Refresh','Reraise')
-	state.Weapons:options('None','DeaconAegis','SequenceAegis','SequenceBlurred')
+	state.Weapons:options('None','Brilliance','Naegling','Malignance')
 	
     state.ExtraDefenseMode = M{['description']='Extra Defense Mode','None','MP','Twilight'}
 	
 	gear.fastcast_jse_back = {name="Rudianos's Mantle",augments={'INT+20','Eva.+20 /Mag. Eva.+20','Mag. Evasion+10','"Fast Cast"+10',}}
-	gear.enmity_jse_back = {name="Rudianos's Mantle",augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10',}}
+	gear.enmity_jse_back = {{ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},}
 
 	-- Additional local binds
 	send_command('bind !` gs c SubJobEnmity')
@@ -48,25 +48,25 @@ function init_gear_sets()
     sets.Enmity = {
 		ammo="Paeapua",
         head="Souveran Schaller +1",
-		neck="Unmoving Collar",
+		neck="Moonbeam Necklace",
 		ear1="Odnowa Earring +1",
 		ear2="Friomisi Earring",
         body="Souv. Cuirass +1",
 		hands="Souv. Handsch. +1",
 		ring1="Supershear Ring",
 		ring2="Moonbeam Ring",
-        back="Rudianos's Mantle",
+        back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
 		waist="Creed Baudrier",
 		legs="Souv. Diechlings +1",
 		feet="Eschite Greaves"}
 		
     sets.Enmity.SIRD = {ammo="Staunch Tathlum +1",
-		head="Souveran Schaller +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Friomisi Earring",
+		head="Souveran Schaller +1",neck="Moonbeam Necklace",ear1="Odnowa Earring +1",ear2="Friomisi Earring",
 		body="Souv. Cuirass +1",hands="Macabre Gauntlets",ring1="Supershear Ring",ring2="Moonbeam Ring",
 		back=gear.enmity_jse_back,waist="Rumination Sash",legs="Founder's Hose",feet="Odyssean Greaves"}
 		
     sets.Enmity.DT = {ammo="Staunch Tathlum +1",
-        head="Souv. Schaller +1",neck="Loricate Torque +1",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
+        head="Souv. Schaller +1",neck="Moonbeam Necklace",ear1="Odnowa Earring +1",ear2="Odnowa Earring",
         body="Rev. Surcoat +3",hands="Souv. Handsch. +1",ring1="Supershear Ring",ring2="Moonbeam Ring",
         back="Moonlight Cape",waist="Creed Baudrier",legs="Souv. Diechlings +1",feet="Souveran Schuhs +1"}
 		
@@ -144,7 +144,7 @@ function init_gear_sets()
 		hands="Leyline Gloves",
 		ring1="Kishar Ring",
 		ring2="Moonbeam Ring",
-		back=gear.fastcast_jse_back,
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Damage taken-4%',}},
 		waist="Flume Belt +1",
 		legs="Souv. Diechlings +1",
 		feet="Carmine Greaves"
@@ -160,7 +160,7 @@ function init_gear_sets()
 		hands="Leyline Gloves",
 		ring1="Kishar Ring",
 		ring2="Moonbeam Ring",
-		back=gear.fastcast_jse_back,
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','"Fast Cast"+10','Damage taken-4%',}},
 		waist="Flume Belt +1",
 		legs="Souv. Diechlings +1",
 		feet="Carmine Greaves"
@@ -319,12 +319,12 @@ function init_gear_sets()
 
     sets.midcast['Enhancing Magic'] = {ammo="Staunch Tathlum +1",
 		head="Carmine Mask +1",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Loquacious Earring",
-		body="Shab. Cuirass +1",hands="Leyline Gloves",ring1="Defending Ring",ring2="Kishar Ring",
+		body="Eschite Breastplate",hands="Leyline Gloves",ring1="Defending Ring",ring2="Kishar Ring",
 		back="Merciful Cape",waist="Olympus Sash",legs="Carmine Cuisses +1",feet="Odyssean Greaves"}
 		
     sets.midcast['Enhancing Magic'].SIRD = {ammo="Staunch Tathlum +1",
 		head="Souv. Schaller +1",neck="Incanter's Torque",ear1="Andoaa Earring",ear2="Odnowa Earring",
-		body="Shab. Cuirass +1",hands="Souv. Handsch. +1",ring1="Defending Ring",ring2="Moonbeam Ring",
+		body="Eschite Breastplate",hands="Souv. Handsch. +1",ring1="Defending Ring",ring2="Moonbeam Ring",
 		back="Merciful Cape",waist="Olympus Sash",legs="Carmine Cuisses +1",feet="Odyssean Greaves"}
 
 	sets.midcast.Stoneskin = set_combine(sets.midcast['Enhancing Magic'], {waist="Siegel Sash"})
@@ -354,11 +354,11 @@ function init_gear_sets()
 		feet="Souveran Schuhs +1",
 		neck="Diemer Gorget",
 		waist="Flume Belt +1",
-		left_ear="Odnowa Earring +1",
-		right_ear="Eabani Earring",
-		left_ring="Defending Ring",
-		right_ring="Moonbeam Ring",
-		back="Rudianos's Mantle",
+		ear2="Odnowa Earring +1",
+		ear1="Eabani Earring",
+		ring1="Defending Ring",
+		ring2="Moonbeam Ring",
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
 	}
 		
     sets.idle.PDT = {sub="Ochain",ammo="Staunch Tathlum +1",
@@ -416,23 +416,23 @@ function init_gear_sets()
 	sets.TreasureHunter = set_combine(sets.TreasureHunter, {})
 	
 	-- Weapons sets
-	sets.weapons.MaligAegis = {main="Malignance Sword",sub="Priwen"}
-	sets.weapons.SequenceBlurred = {main="Sequence",sub="Blurred Shield"}
-	sets.weapons.SequenceAegis = {main="Sequence",sub="Aegis"}
+	sets.weapons.Brilliance = {main="Brilliance",sub="Priwen"}
+	sets.weapons.Naegling = {main="Naegling",sub="Priwen"}
+	sets.weapons.Malignance = {main="Malignance Sword",sub="Priwen"}
 	sets.weapons.DualWeapons = {main="Sequence",sub="Demersal Degen +1"}
     
     sets.defense.PDT = {
 		sub="Ochain",
 		ammo="Staunch Tathlum +1",
 		head="Souv. Schaller +1",
-		neck="Diemer Gorget",
+		neck="Moonbeam Necklace",
 		ear1="Odnowa Earring +1",
 		ear2="Thureous Earring",
-		body="Souv. Cuirass +1",
+		body="Hjarrandi Breastplate",
 		hands="Souv. Handsch. +1",
 		ring1="Moonbeam Ring",
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
 		ring2="Moonbeam Ring",
-		back="Rudianos's Mantle",
 		waist="Flume Belt +1",
 		legs="Souv. Diechlings +1",
 		feet="Souveran Schuhs +1"}
@@ -526,7 +526,7 @@ function init_gear_sets()
 		right_ear="Telos Earring",
 		left_ring="Defending Ring",
 		right_ring="Moonbeam Ring",
-		back="Rudianos's Mantle",
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
 	}
 
     sets.engaged.Acc = {sub="Ochain",ammo="Hasty Pinion +1",
@@ -557,7 +557,7 @@ function init_gear_sets()
 		right_ear="Telos Earring",
 		left_ring="Defending Ring",
 		right_ring="Moonbeam Ring",
-		back="Rudianos's Mantle",
+		back={ name="Rudianos's Mantle", augments={'HP+60','Eva.+20 /Mag. Eva.+20','HP+20','Enmity+10','Damage taken-5%',}},
 	}
 		
 	sets.engaged.Dawn = {sub="Ochain",ammo="Staunch Tathlum +1",
