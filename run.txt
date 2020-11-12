@@ -1,9 +1,13 @@
+input /ja "Embolden" <me>
+wait 1
 input /ma "Crusade" <me>
-wait 5
-input /ma "Refresh" <me>
 wait 5
 input /ma "Aquaveil" <me>
 wait 5
 input /ma "Phalanx" <me>
 wait 5
+input /ma "Refresh" <me>
+wait 5
 input /ma "Temper" <me>
+wait 5
+input /ma "Cocoon" <me>
