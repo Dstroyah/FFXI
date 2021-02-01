@@ -52,7 +52,7 @@ function init_gear_sets()
     -- Precast Sets
 
     -- Fast cast sets for spells (main 4 + ammo 2 + head 10 + neck 5 + ear2 2 + body 14 + hands 5 + ring2 2 + back 10 + waist 3 + legs 6 + feet 7 = 70% + Light Arts 10% = 80%)
-    sets.precast.FC = {main="Grioavolr",sub="Niobid Strap",ammo="Incantor Stone",
+    sets.precast.FC = {main="Grioavolr",sub="Enki Strap",ammo="Incantor Stone",
 		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Orunmila's Torque",ear2="Loquac. Earring",
 		body="Inyanga Jubbah +2",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Lebeche Ring",ring2="Prolix Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Witful Belt",legs="Ayanmo Cosciales +2",feet="Regal Pumps +1"}
@@ -65,10 +65,11 @@ function init_gear_sets()
 
     sets.precast.FC.StatusRemoval = set_combine(sets.precast.FC, {legs="Ebers Pantaloons +1"})
 
-	-- - Cure Casting Time (head 10 + body 14 + back 10 + legs 12 + feet 18 = 64% - Gifts + 8 - Light Arts + 10 = 82%)
+	-- - Cure Casting Time = head 10 + neck 9 + ear2 2 + body 14 + ring2 2 + back 10 + legs 12 + feet 4 + Gifts 8 + Light Arts 10 = 81%
     sets.precast.FC.Cure = {
-		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},body="Inyanga Jubbah",
-		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},legs="Ebers Pantaloons +1",feet="Hygieia Clogs +1"}
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Cleric's Torque +2",ear2="Loquac. Earring",
+		body="Inyanga Jubbah",ring2="Prolix Ring",
+		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},legs="Ebers Pantaloons +1",feet="Kaykaus Boots +1"}
 	-- Impatiens
 		
     sets.precast.FC.Curaga = sets.precast.FC.Cure
@@ -106,23 +107,25 @@ function init_gear_sets()
 		body="Chironic Doublet",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Fenrir Ring",ring2="Stikini Ring +1 +1",
 		back={ name="Alaunus's Cape", augments={'STR+32','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Refoccilation Stone",legs="Lengo Pants",feet="Medium's Sabots"})--Fanatic Gloves
 		
-	sets.precast.WS['Realmrazer'] = set_combine(sets.precast.WS,   {
-		head="Ebers Cap",neck="Fotia Gorget",ear1="Brutal Earring",ear2="Moonshade Earring",
-		body="Chironic Doublet",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Levia. Ring",ring2="Rufescent Ring",
-		back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Fotia Belt",legs="Lengo Pants",feet="Medium's Sabots"})--Fanatic Gloves
+	sets.precast.WS['Realmrazer'] = set_combine(sets.precast.WS,   {ammo="Amar Cluster",
+		head="Piety Cap +3",neck="Fotia Gorget",ear1="Telos Earring",ear2="Moonshade Earring",
+		body="Piety Briault +3",hands="Piety Mitts +3",ring1="Metamorph Ring",ring2="Rufescent Ring",
+		back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Fotia Belt",legs="Piety Pantaloons +3",feet="Piety Duckbills +3"})
 		
-	sets.precast.WS['Hexa Strike'] = {
+	sets.precast.WS['Hexa Strike'] = {ammo="Amar Cluster",
 		head="Piety Cap +3",neck="Fotia Gorget",ear1="Moonshade Earring",ear2="Telos Earring",
+		body="Piety Briault +3",hands="Piety Mitts +3",ring1="Ilabrat Ring",ring2="Metamorph Ring",
+		back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Luminary Sash",legs="Piety Pantaloons +3",feet="Piety Duckbills +3"}
+		
+	sets.precast.WS['Mystic Boon'] = {ammo="Amar Cluster",
+		head="Piety Cap +3",neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Moonshade Earring",ear2="Telos Earring",
+		body="Piety Briault +3",hands="Piety Mitts +3",ring1="Ilabrat Ring",ring2="Metamorph Ring",
+		back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Fotia Belt",legs="Piety Pantaloons +3",feet="Piety Duckbills +3"}
+    
+	sets.precast.WS['Black Halo'] = {ammo="Amar Cluster",
+		head="Piety Cap +3",neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Moonshade Earring",ear2="Ishvara Earring",
 		body="Piety Briault +3",hands="Piety Mitts +3",ring1="Ilabrat Ring",ring2="Begrudging Ring",
 		back={ name="Alaunus's Cape", augments={'STR+20','Accuracy+20 Attack+20','STR+10','Crit.hit rate+10',}},waist="Fotia Belt",legs="Piety Pantaloons +3",feet="Piety Duckbills +3"}
-		
-	sets.precast.WS['Mystic Boon'] = {
-		head="",
-		}
-    
-	sets.precast.WS['Black Halo'] = {
-		head="",
-		}
 
     -- Midcast Sets
     
@@ -136,46 +139,47 @@ function init_gear_sets()
     gear.default.obi_waist = "Hachirin-no-Obi"
     gear.default.obi_back = "Mending Cape"
 
-	-- Cure Potency = (main 10 + sub 3 + head 17 + ring1 3 + back 10 + feet 10 = 53%) Cure Potency II = (main 2 + ear2 2 + hands 4 = 8%)
-	-- -Enmity = Merits 5 (main 10 + head 6 + ear1 3 + ear2 5 + hands 7 + ring1 5 + feet 10 = 51 / 50)
-    sets.midcast.CureSolace = set_combine(sets.midcast.FastRecast,   {main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},sub="Ammurapi Shield",ammo="Hydrocera",
-		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},neck="Incanter's Torque",ear1="Halasz Earring",ear2="Glorious Earring",
-		body="Ebers Bliaud +1",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Sirona's Ring",
-        back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
+--		Cure Potency = Main 10 + head 10 +	neck 10 + ring1 3 + back 10 + feet 17 = 60% Cure potency II = main 2 + ear2 2 + hands 4 = 8%
+--		-Enmity = main 10 + head 6 + neck 24 + ear2 5 + hands 7 + ring1 5 + feet 6 + Merit 5 = -62
+	sets.midcast.CureSolace = {main={ name="Queller Rod", augments={'Healing magic skill +15','"Cure" potency +10%','"Cure" spellcasting time -7%',}},sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Cleric's Torque +2",ear1="Gifted Earring",ear2="Glorious Earring",
+		body="Ebers Bliaud +1",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Stikini Ring +1",
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Luminary Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}}}
 	
 	-- Cure Potency = Head 17 + Neck 7 + ear1 3 + ring1 3 + back 10 + feet 10 = 50% Cure Potency II = ear2 2 + body 6 + hands 4 = 12%
 	-- -Enmity = Merits 5 + head 6 + neck 10 + ear2 5 + body 6 + hands 7 + ring1 5 + feet 10 = 54 -Enmity
 	sets.midcast.CureMisery = {main="Yagrush",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},neck="Cleric's Torque +1",ear1="Nourishing Earring +1",ear2="Glorious Earring",
+		head={ name="Vanya Hood", augments={'MP+50','"Cure" potency +7%','Enmity-6',}},neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Nourishing Earring +1",ear2="Glorious Earring",
 		body="Theophany Briault +3",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Defending Ring",
-		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Carrier's Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}}
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Carrier's Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}}}
 		
     sets.midcast.Cure = sets.midcast.CureSolace
 	
 	sets.midcast.storm_active = set_combine(sets.midcast.CureSolace, {waist="Hachirin-no-obi"})
 
-	-- Cure Potency = (main 15 + head 17 + ear1 7 + ring1 3 + back 10 + feet 10 = 62%) Cure Potency II = (main 2 + ear2 2 + body 6 + hands 4 = 14%)
-	-- -Enmity = Merits 5 (main 10 + head 6 + neck 3 + ear2 5 + body 6 + hands 7 + ring1 5 + feet 10 = 57 / 50)
-    sets.midcast.Curaga = set_combine(sets.midcast.FastRecast,    {main={ name="Queller Rod", augments={'MND+15','Mag. Acc.+15','"Cure" potency +15%',}},sub="Ammurapi Shield",ammo="Hydrocera",
-		head={name="Vanya Hood",augments={'MP+50','"Cure" potency +7%','Enmity -6'}},neck="Orunmila's Torque",ear2="Glorious Earring",ear1="Nourishing Earring +1",
-		body="Theophany Briault +3",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Defending Ring",
-		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Luminary Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots", augments={'MP+60','"Cure" spellcasting time -5%','Enmity-5',}}})
+	-- Cure Potency = (main 15 + head 10 + neck 10 + ear1 7 + ring1 3 + back 10 + feet 17 = 72%) Cure Potency II = (main 2 + ear2 2 + body 6 + hands 4 = 14%)
+	-- -Enmity = main 10 + neck 24 + ear2 5 + body 6 + hands 7 + ring1 5 + feet 6 + merits 5 = -68
+    sets.midcast.Curaga = {main={ name="Queller Rod", augments={'MND+15','Mag. Acc.+15','"Cure" potency +15%',}},sub="Ammurapi Shield",ammo="Pemphredo Tathlum",
+		head={ name="Vanya Hood", augments={'MP+50','"Fast Cast"+10','Haste+2%',}},neck="Cleric's Torque +2",ear2="Glorious Earring",ear1="Gifted Earring",
+		body="Theophany Briault +3",hands="Theophany Mitts +3",ring1="Lebeche Ring",ring2="Stikini Ring +1",
+		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Luminary Sash",legs="Ebers Pantaloons +1",feet={ name="Kaykaus Boots +1", augments={'Mag. Acc.+20','"Cure" potency +6%','"Fast Cast"+4',}}}
 		
     sets.midcast.CureMelee = set_combine(sets.midcast.FastRecast,    {main="Ababinili +1",sub="Curatio Grip",ammo="Hydrocera",
 		head={name="Vanya Hood",augments={'MP+50','"Fast Cast"+10','Haste+2%'}},neck="Colossus's Torque",ear1="Nourishing Earring +1",ear2="Glorious Earring",
 		body={name="Vanya Robe",augments={'Healing Magic Skill +20','"Cure" spellcasting time -7%','Magic Dmg. taken -3%'}},hands="Theophany Mitts +3",ring1="Ephedra Ring",ring2="Sirona's Ring",
         back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Witful Belt",legs="Ebers Pantaloons +1",feet="Inyanga Crackows +2"})
+	
 	-- Skal laves færdigt	
 	-- sets.midcast.Cura = 
 
 	-- 572 Healing Magic Skill + 82% fra +Cursna gear = 51% removal rate
     sets.midcast.Cursna = set_combine(sets.midcast.FastRecast,    {main="Yagrush",sub="Genmei Shield",ammo="Incantor Stone",
 		head={ name="Vanya Hood", augments={'Healing magic skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3',}},neck="Malison Medallion",ear1="Beatific Earring",ear2="Loquacious Earring",
-		body="Ebers Bliaud +1",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Ephedra Ring",ring2="Sirona's Ring",
+		body="Ebers Bliaud +1",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Ephedra Ring",ring2="Haoma's Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Witful Belt",legs="Theophany Pantaloons +3",feet={name="Vanya Clogs", augments={'Healing Magic Skill +20','"Cure" spellcasting time -7%','Magic dmg. taken -3%',}}})
 		
     sets.midcast.StatusRemoval = set_combine(sets.midcast.FastRecast,    {main="Yagrush",sub="Genmei Shield",ammo="Incantor Stone",
-		head="Ebers Cap",neck="Cleric's Torque +1",ear1="Ethereal Earring",ear2="Mendi. Earring",
+		head="Ebers Cap",neck={ name="Cleric's Torque +2", augments={'Path: A'}},ear1="Ethereal Earring",ear2="Mendi. Earring",
 		body="Inyanga Jubbah +2",hands={ name="Fanatic Gloves", augments={'MP+45','Healing magic skill +9','"Conserve MP"+6','"Fast Cast"+5',}},ring1="Defending Ring",
 		legs="Ebers Pantaloons +1",back="Mending Cape"})
 	-- Impatiens
@@ -253,7 +257,7 @@ function init_gear_sets()
     
 
     -- Idle sets
-    sets.idle = {main="Maxentius",sub="Genmei Shield",ammo="Staunch Tathlum +1",
+    sets.idle = {main="Reikikon",sub="Enki Strap",ammo="Staunch Tathlum +1",
 		head="Inyanga Tiara +2",neck="Warder's Charm +1",ear1="Hearty Earring",ear2="Flashward Earring",
 		body="Inyanga Jubbah +2",hands="Inyanga Dastanas +2",ring1="Stikini Ring +1",ring2="Defending Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Carrier's Sash",legs="Inyanga Shalwar +2",feet="Inyanga Crackows +2"}
@@ -264,7 +268,7 @@ function init_gear_sets()
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Luminary Sash",legs="Theophany Pantaloons +3",feet="Battlecast Gaiters"}
 
     sets.idle.Town = {main="Yagrush",sub="Ammurapi Shield",ammo="Homiliary",
-		head="Vanya Hood",neck="Warder's Charm +1",ear1="Nourishing Earring +1",ear2="Glorious Earring",
+		head="Vanya Hood",neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Nourishing Earring +1",ear2="Glorious Earring",
 		body="Inyanga Jubbah +2",hands="Theophany Mitts +3",ring1="Stikini Ring +1",ring2="Defending Ring",
 		back="Pahtli Cape",waist="Fucho-No-Obi",legs="Assiduity Pants +1",feet="Herald's Gaiters"}
     
@@ -274,7 +278,7 @@ function init_gear_sets()
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Luminary Sash",legs="Ayanmo Cosciales +2",feet="Ayanmo Gambieras +2"}
     
 	sets.idle.Misery = {main="Yagrush",sub="Genmei Shield",ammo="Staunch Tathlum +1",
-		head="Inyanga Tiara +2",neck="Warder's Charm +1",ear1="Hearty Earring",ear2="Flashward Earring",
+		head="Inyanga Tiara +2",neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Hearty Earring",ear2="Flashward Earring",
 		body="Inyanga Jubbah +2",hands="Inyanga Dastanas +2",ring1="Purity Ring",ring2="Defending Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Mag. Acc+20 /Mag. Dmg.+20','MND+10','"Fast Cast"+10','Mag. Evasion+15',}},waist="Carrier's Sash",legs="Inyanga Shalwar +2",feet="Inyanga Crackows +2"}
 	
@@ -294,9 +298,9 @@ function init_gear_sets()
 	-- -20% MDT 
 	--	30% MDT + Shell = 59%
     sets.defense.MDT = 
-		{main="Maxentius",sub="Ammurapi Shield",ammo="Staunch Tathlum +1",
-		head="Inyanga Tiara +2",neck="Warder's Charm +1",ear1="Flashward Earring",ear2="Hearty Earring",
-		body="Inyanga Jubbah +2",hands="Inyanga Dastanas +2",ring1="Stikini Ring +1 +1",ring2="Defending Ring",
+		{main="Reikikon",sub="Enki Strap",ammo="Staunch Tathlum +1",
+		head="Inyanga Tiara +2",neck={ name="Cleric's Torque +2", augments={'Path: A',}},ear1="Flashward Earring",ear2="Hearty Earring",
+		body="Inyanga Jubbah +2",hands="Inyanga Dastanas +2",ring1="Stikini Ring +1",ring2="Defending Ring",
 		back={ name="Alaunus's Cape", augments={'MND+20','Eva.+20 /Mag. Eva.+20','MND+10','"Cure" potency +10%','Mag. Evasion+15',}},waist="Carrier's Sash",legs="Theophany Pantaloons +3",feet="Inyanga Crackows +2"}
 
     sets.Kiting = {feet="Herald's Gaiters"}
@@ -312,14 +316,14 @@ function init_gear_sets()
     
     -- Basic set for if no TP weapon is defined.
     sets.engaged = {ammo="Amar Cluster",
-		head="Aya. Zucchetto +2",neck="Asperity Necklace",ear1="Steelflash Earring",ear2="Bladeborn Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",ring2="Apate Ring",
-		back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+2','"Dbl.Atk."+10',}},waist="Windbuffet Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
+		head="Aya. Zucchetto +2",neck="Lissome Necklace",ear1="Telos Earring",ear2="Cessance Earring",
+		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",ring2="Ilabrat Ring",
+		back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%',}},waist="Windbuffet Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
-	sets.engaged.Acc = set_combine(sets.precast.engaged,    {ammo="Amar Cluster",
-		head="Aya. Zucchetto +2",neck="Subtlety Spec.",ear1="Steelflash Earring",ear2="Bladeborn Earring",
-		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",ring2="Apate Ring",
-		back="Umbra Cape",waist="Windbuffet Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"})
+	sets.engaged.Acc = {ammo="Amar Cluster",
+		head="Aya. Zucchetto +2",neck="Lissome Necklace",ear1="Telos Earring",ear2="Cessance Earring",
+		body="Ayanmo Corazza +2",hands="Aya. Manopolas +2",ring1="Petrov Ring",ring2="Ilabrat Ring",
+		back={ name="Alaunus's Cape", augments={'DEX+20','Accuracy+20 Attack+20','DEX+10','"Dbl.Atk."+10','Phys. dmg. taken-10%'}},waist="Windbuffet Belt",legs="Aya. Cosciales +2",feet="Aya. Gambieras +2"}
 
     -- Buff sets: Gear that needs to be worn to actively enhance a current player buff.
     sets.buff['Divine Caress'] = {hands="Ebers Mitts +1",back="Mending Cape"}
